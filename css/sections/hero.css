@@ -1,0 +1,118 @@
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero__overlay-video {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+  scale: 1.5;
+}
+.hero__left-col {
+  position: relative;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  height: 100%;
+  display: grid;
+}
+.contact-mail {
+  border-radius: 6px;
+  background-color: rgba(33, 47, 52, 0.3);
+  padding: 0.5rem;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 10%;
+  width: max-content;
+  display: grid;
+  gap: 0.4rem;
+  transition: 0.5s;
+}
+.contact-mail:hover {
+  box-shadow: 0 0 1rem rgb(136, 47, 251);
+}
+.contact-mail__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.contact-mail__wrapper img {
+  width: 16px;
+  height: 16px;
+}
+.contact-mail__wrapper a {
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.header {
+  position: fixed;
+  right: 0;
+  left: 60%;
+  z-index: 1;
+}
+.logo {
+  grid-column: 1;
+  justify-self: center;
+  margin-top: 1rem;
+}
+.hero__wrapper {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  padding: 1rem;
+}
+.hero__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  height: 4px;
+  width: 15vw;
+  background-color: var(--white);
+}
+.hero__vertical-author {
+  position: fixed;
+  right: 1rem;
+  transform: translateY(-50%);
+  bottom: 0;
+  display: flex;
+}
+.hero__vertical-line {
+  height: 20vh;
+  width: 1px;
+  background-color: var(--white);
+  background: linear-gradient(rgba(255, 255, 255, 0.01) 1%, white 99%);
+}
+.hero__author {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  align-self: end;
+  color: var(--white);
+  letter-spacing: -6px;
+}
+.socials-wrapper {
+  position: absolute;
+  display: flex;
+  bottom: 10vh;
+  left: 12%;
+  gap: 1rem;
+}
+.socials-wrapper a {
+  position: relative;
+  transition: 0.3s;
+}
+.socials-wrapper a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  inset: -0.2rem;
+  border-radius: 5px;
+}
+.socials-wrapper a:hover {
+  scale: 1.5;
+}

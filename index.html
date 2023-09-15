@@ -1,0 +1,394 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Galac-design</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <button
+          class="ham-btn"
+          aria-label="ham-navigation button"
+          tabindex="0"
+          aria-controls="nav-list"
+        >
+          <div class="ham-line" aria-expanded="false"></div>
+          <div class="ham-line" aria-expanded="false"></div>
+          <div class="ham-line" aria-expanded="false"></div>
+        </button>
+        <ul
+          class="nav__list"
+          data-visible="false"
+          id="nav-list"
+          aria-expanded="false"
+        >
+          <div class="nav__wrapper">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Usluge</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Portfolio</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Često postavljena pitanja</a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <video
+        src="/assets/hero-video.mp4"
+        class="hero__overlay-video"
+        aria-hidden="true"
+        loop
+        autoplay
+      ></video>
+      <div class="hero__left-col">
+        <div class="logo">
+          <a
+            href="#"
+            aria-label="link to home page of galac-design"
+            title="GALAC-DESIGN"
+          >
+            <img src="/assets/images/logo.svg" alt="logo of galac-design" />
+          </a>
+        </div>
+        <div class="contact-mail">
+          <div class="contact-mail__wrapper">
+            <img src="/assets/icons/mail-icon.svg" aria-hidden="true" />
+            <a href="mailto:boris.galac@gmail.com">boris.galac@gmail.com</a>
+          </div>
+          <div class="contact-mail__wrapper">
+            <img src="/assets/icons/phone-icon.svg" aria-hidden="true" />
+            <a href="tel:+385996682736">0996682736</a>
+          </div>
+        </div>
+        <div class="hero__wrapper">
+          <h1 class="hero__headline">
+            Transformiramo Vaše Ideje u Digitalnu Stvarnost
+          </h1>
+          <p class="hero__subheadline">
+            Efikasna i kvalitetna izrada web stranica, shopova, grafičkog
+            dizajna, sve vrste digitalnog dizajna i marketinga po Vašoj mjeri
+          </p>
+          <a
+            href="#offer"
+            class="hero__cta"
+            aria-label="hero btn for explore website"
+            >Istraži što sve nudimo
+            <img src="/assets/icons/arrow-cta-icon.svg" aria-hidden="true"
+          /></a>
+        </div>
+      </div>
+      <div class="hero__vertical-author">
+        <div class="hero__vertical-line"></div>
+        <span class="hero__author">GALAC</span>
+        <span class="hero__author">DESIGN</span>
+      </div>
+      <div class="socials-wrapper">
+        <a href="#" aria-label="link for facebook" title="Facebook"
+          ><img src="/assets/icons/fb-icon.svg" alt="facebook icon"
+        /></a>
+        <a href="#" aria-label="link for whatsapp" title="Whatsapp"
+          ><img src="/assets/icons/whatsapp-icon.svg" alt="whatsapp icon"
+        /></a>
+        <a href="#" aria-label="link for instagram" title="Instgaram"
+          ><img src="/assets/icons/instagram-icon.svg" alt="instagram icon"
+        /></a>
+        <a href="#" aria-label="link for phonecall" title="Phonecall"
+          ><img src="/assets/icons/phonecall-icon.svg" alt="phone icon"
+        /></a>
+      </div>
+      <div class="infinite-slider">
+        <ul class="infinite-slider__wrapper">
+          <li class="infinite__slider__slide">
+            <span class="slide-text">web stranice</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">web shopovi</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">vizitke</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">letci</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">logo</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">banneri</span>
+          </li>
+        </ul>
+        <ul class="infinite-slider__wrapper">
+          <li class="infinite__slider__slide">
+            <span class="slide-text">web stranice</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">web shopovi</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">vizitke</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">letci</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">logo</span>
+          </li>
+          <li class="infinite__slider__slide">
+            <span class="slide-text">banneri</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- OFFER SECTION -->
+    <section class="offer p-block-6" id="offer">
+      <img
+        src="/assets/images/ponuda-bg.jpg"
+        aria-hidden="true"
+        class="offer-overlay-bg"
+      />
+      <div class="container">
+        <h2 class="h2--heading mb-3">Što nudimo</h2>
+        <div class="offer__wrapper">
+          <article class="offfer-card">
+            <div class="offer-card__header">
+              <img
+                src="/assets/icons/web-dev-icon.gif"
+                alt="web solutions for everyone"
+              />
+            </div>
+            <div class="offer-card__body">
+              <h3 class="offer-card__heading">web rješenja</h3>
+              <p class="offer-card__text">
+                Online prisutnost je danas nešto što se podrazumijeva. Bilo da
+                želite privući pažnju, olakšati kupnju ili jednostavno istaknuti
+                svoju prisutnost na mreži, mi kreiramo prilagođene
+                <span class="yellow-text">web stranice i web shopove</span> koji
+                odražavaju vašu estetiku i ciljeve.
+              </p>
+            </div>
+          </article>
+          <article class="offfer-card">
+            <div class="offer-card__header">
+              <img
+                src="/assets/icons/graphic-icon.gif"
+                alt="graphic solutions for everyone"
+              />
+            </div>
+            <div class="offer-card__body">
+              <h3 class="offer-card__heading">grafički dizajn</h3>
+              <p class="offer-card__text">
+                Radimo sve vrste grafičkog dizajna za Vaš biznis. Od
+                <span class="yellow-text"
+                  >logotipa, vizitki, brošura, letaka, bannera i sl</span
+                >
+                . Nastojimo istaknuti Vašu jedinstvenost u stvaranju atraktivnih
+                marketinških materijala koji privlače pažnju i donose prihod.
+              </p>
+            </div>
+          </article>
+          <article class="offfer-card">
+            <div class="offer-card__header">
+              <img
+                src="/assets/icons/marketing-icon.gif"
+                alt="marketing solutions for everyone"
+              />
+            </div>
+            <div class="offer-card__body">
+              <h3 class="offer-card__heading">vođenje društvenih mreža</h3>
+              <p class="offer-card__text">
+                Bez obzira radi li se o
+                <span class="yellow-text"
+                  >redovnom ažuriranju društvenih profila, kreiranju
+                  kampanja</span
+                >
+                koje privlače pažnju ili korištenju analitike za kontinuirano
+                poboljšanje performansi, mi smo tu da vaš brend bude atraktivan
+                i poželjan.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- SOLUTIONS SECTION -->
+    <section class="solutions p-block-6">
+      <div class="container">
+        <div class="solutions__btns-wrapper mb-3">
+          <button class="solution-btn active-btn">web rješenja</button>
+          <button class="solution-btn">grafički dizajn</button>
+          <button class="solution-btn">društvene mreže</button>
+        </div>
+        <div class="solutions__wrapper mb-4">
+          <h2 class="h2--heading dark-text mb-1">
+            Izrađujemo kvalitetne web stranice i shopove po Vašoj mjeri
+          </h2>
+          <div class="solutions__inner-wrapper">
+            <figure class="solutions__webdesign-img-wrapper">
+              <img
+                src="/assets/images/web-solution-img.png"
+                alt="web design image"
+                class="solutions__webdesign-img"
+              />
+            </figure>
+            <div class="solutions__article-wrapper">
+              <article class="solutions__webdesign-article">
+                <img
+                  src="/assets/icons/clarity-design-icon.svg"
+                  alt="clarity design icon"
+                />
+                <p class="paragraph-dark">
+                  Dizajn web stranice igra ključnu ulogu u stvaranju prvog dojma
+                  kod posjetitelja i utječe na njihovu interakciju s sadržajem.
+                  <strong>Kvalitetan dizajn</strong> može znatno poboljšati
+                  korisničko iskustvo i povećati uspješnost web stranice.
+                </p>
+              </article>
+              <article class="solutions__webdesign-article">
+                <img
+                  src="/assets/icons/code-icon.svg"
+                  alt="clarity design icon"
+                />
+                <p class="paragraph-dark">
+                  Ne koristimo magične web buildere koji se nude na tržištu i
+                  pružaju website ili shop u nekoliko klikova. Naš tim je
+                  stručan u ovom polju i nema sumnje da ćemo Vam
+                  <strong
+                    >ručno iskodirati cijelu web stranicu ili web shop</strong
+                  >
+                  . Otvoreni i transparentni kod dobijete ukoliko želite nakon
+                  izrade.
+                </p>
+              </article>
+              <article class="solutions__webdesign-article">
+                <img
+                  src="/assets/icons/security-icon.svg"
+                  alt="clarity design icon"
+                />
+                <p class="paragraph-dark">
+                  <strong>Sigurnost i održavanje</strong> web stranice su od
+                  suštinskog značaja za zaštitu od potencijalnih prijetnji i
+                  očuvanje njenog besprijekornog funkcioniranja. Redovno
+                  ažuriranje softwarea, praćenje sigurnosnih propusta te brza
+                  reakcija na potencijalne probleme osiguravaju stabilnost i
+                  pouzdanost vaše web stranice.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="process-web">
+          <h3 class="process-web__heading">Proces izrade websitea</h3>
+          <img
+            src="/assets/images/ornament-img.png"
+            aria-hidden="true"
+            class="ornament"
+          />
+          <div class="process-web__wrapper">
+            <article class="process-web__article">
+              <img
+                class="process-web__article-img"
+                src="/assets/icons/browser.gif"
+                alt="icon of html coding"
+              />
+              <p class="paragraph-dark">
+                Kao i svaki projekt, tako i izrada web stranice ili web shopa
+                zahtijeva određenu informacijsku strukturu. Dakle,
+                <strong>popunite jedan upitnik</strong> kako bi dobili što više
+                informacija o Vašem biznisu kojim se bavite, te kako bi jasno i
+                uspješno ostvarili Vaš cilj na webu.
+              </p>
+            </article>
+            <article class="process-web__article">
+              <img
+                class="process-web__article-img"
+                src="/assets/icons/monitor.gif"
+                alt="icon of html coding"
+              />
+              <p class="paragraph-dark">
+                Nakon što smo sve potrebne podatke prikupili možemo na
+                <strong>željeni i atraktivni dizajn</strong>. Najispravniji put
+                je uvijek imati dizajn prije samog kodiranja stranice. Klijent
+                je taj koji ima zadnju riječ vezano za dizajn web projekta, a mi
+                smo mu dužni cilj pretvoriti u realnost.
+              </p>
+            </article>
+            <article class="process-web__article">
+              <img
+                class="process-web__article-img"
+                src="/assets/icons/html.gif"
+                alt="icon of html coding"
+              />
+              <p class="paragraph-dark">
+                Dizajn je odobren i mi se bacamo na posao. U što kraćem roku se
+                trudimo razviti optimiziran i kvalitetan kod koji će
+                <strong
+                  >dizajn pretvoriti u stabilan i vrhunski website ili
+                  webshop</strong
+                >. Nikad ne koristimo neki page builder koji će u par klikova
+                stvoriti web nego sve radimo ručno i stručno :) .
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <h2 class="h2--heading portfolio__heading mb-3">Portfolio radova</h2>
+      <div class="portfolio__wrapper">
+        <figure class="web-card">
+          <a href="#" class="web-card__see-more"
+            ><img src="/assets/icons/eye-icon.svg" aria-hidden="true" />
+            Pogledaj website</a
+          >
+          <img
+            src="/assets/images/slap-image.png"
+            alt="image of web page 'Slap'"
+            class="web-card__img"
+          />
+        </figure>
+        <div class="portfolio__description-project">
+          <div class="name-of-project-wrapper">
+            <span class="project-label">ime projekta</span>
+            <h3 class="project-name">Udruga "Slap"</h3>
+          </div>
+          <div class="name-of-project-wrapper">
+            <span class="project-label">tip projekta</span>
+            <h4 class="project-type">Presentation page</h4>
+          </div>
+          <div class="name-of-project-wrapper">
+            <span class="project-label">korištene tehnologije</span>
+            <div class="project-technologies">
+              <span class="project-tech">
+                <img src="/assets/icons/html.png" alt="html icon" />
+                html
+              </span>
+              <span class="project-tech">
+                <img src="/assets/icons/css.png" alt="css icon" />
+                css
+              </span>
+              <span class="project-tech">
+                <img src="/assets/icons/js.png" alt="js icon" />
+                js
+              </span>
+            </div>
+          </div>
+          <div class="name-of-project-wrapper">
+            <span class="project-label">tip projekta</span>
+            <h3 class="project-desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+              quis.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

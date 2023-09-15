@@ -1,0 +1,8 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --blue: hsl(216, 100%, 50%);
+  --yellow: hsla(61, 100%, 63%, 1);
+  --dark: hsl(210, 6%, 13%);
+  --paragraph-clr: hsl(212, 9%, 37%);
+}

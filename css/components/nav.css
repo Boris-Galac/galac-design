@@ -1,0 +1,109 @@
+.nav {
+  position: relative;
+  background-color: var(--black);
+  padding: 1.5rem;
+}
+.nav__list {
+  opacity: 0;
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  display: grid;
+  place-items: center;
+}
+.nav__list[data-visible="false"] {
+  animation: closeMenu 0.4s forwards;
+}
+@keyframes closeMenu {
+  from {
+    opacity: 1;
+    pointer-events: visible;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.nav__list[data-visible="true"] {
+  animation: openMenu 0.4s forwards;
+}
+@keyframes openMenu {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: visible;
+  }
+}
+.nav__wrapper {
+  display: grid;
+  gap: 5vh;
+}
+.nav__item {
+  text-align: right;
+}
+.nav__link {
+  position: relative;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--white);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+.nav__link:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* ham button */
+
+.ham-btn {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 3rem;
+  display: grid;
+  place-items: center;
+  gap: 9px;
+  background-color: transparent;
+  margin-left: auto;
+  z-index: 100;
+  cursor: pointer;
+}
+.ham-line {
+  height: 2px;
+  transition: 0.2s;
+  width: 100%;
+  background-color: var(--white);
+  place-self: center;
+}
+.ham-line[aria-expanded="true"] {
+  position: absolute;
+  place-self: center;
+}
+.ham-line[aria-expanded="true"]:first-child {
+  transform: rotate(45deg);
+}
+.ham-line[aria-expanded="true"]:nth-child(2) {
+  animation: middleLine 0.5s forwards;
+}
+@keyframes middleLine {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.ham-line[aria-expanded="true"]:last-child {
+  transform: rotate(-45deg);
+}

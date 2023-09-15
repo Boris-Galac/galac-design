@@ -1,0 +1,33 @@
+.infinite-slider {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  background-color: rgb(7, 21, 35);
+  padding: 0.2rem;
+  gap: 2rem;
+  user-select: none;
+}
+.infinite-slider__wrapper {
+  display: flex;
+  gap: 2em;
+}
+.slide-text {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  width: max-content;
+}
+
+.infinite-slider__wrapper {
+  animation: scroll-animation 5s linear infinite;
+}
+@keyframes scroll-animation {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(calc(-100% - 2rem));
+  }
+}
