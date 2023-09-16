@@ -1,0 +1,31 @@
+.techs {
+  padding-block: 1rem;
+  background: url("/assets/images/overlay-tech.png") no-repeat center
+    center/cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+.techs__img {
+  object-fit: contain;
+  aspect-ratio: 1;
+}
+.techs__marquee {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  animation: marquee 20s linear infinite;
+}
+.techs__content {
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  flex-shrink: 0;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-51%);
+  }
+}

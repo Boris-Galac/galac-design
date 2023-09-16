@@ -1,12 +1,8 @@
-.solutions {
-}
 .solutions__btns-wrapper {
   outline: 2px solid rgb(143, 143, 143);
   border-radius: 100vmax;
   display: flex;
   margin-inline: auto;
-}
-.solutions__wrapper {
 }
 .solutions__inner-wrapper {
   display: flex;
@@ -15,9 +11,7 @@
 }
 .solutions__webdesign-img-wrapper {
   overflow: hidden;
-  height: 319px;
-}
-.solutions__webdesign-img {
+  height: 409px;
 }
 .solutions__article-wrapper {
   flex: 1;

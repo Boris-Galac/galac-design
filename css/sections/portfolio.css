@@ -5,16 +5,17 @@
   padding-inline: 1rem;
   padding-block: 4rem;
   isolation: isolate;
+  background-attachment: fixed;
 }
 .portfolio::before {
   content: "";
   position: absolute;
-  background: rgba(17, 43, 70, 0.756);
   z-index: -1;
+  backdrop-filter: blur(10px);
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 44%;
+  top: 55%;
+  bottom: 0;
 }
 .portfolio::after {
   content: "";
@@ -35,6 +36,7 @@
 }
 .project-technologies {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 

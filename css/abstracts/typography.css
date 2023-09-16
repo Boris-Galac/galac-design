@@ -119,7 +119,11 @@ span {
   padding: 5px 10px;
   font-size: 0.8rem;
   margin-bottom: 0.6rem;
+  letter-spacing: 2px;
 }
 .portfolio__heading {
   font-weight: 400;
+}
+.techs__heading {
+  margin-inline: 1rem;
 }

@@ -10,6 +10,7 @@
 @import "sections/offer.css";
 @import "sections/solutions.css";
 @import "sections/portfolio.css";
+@import "sections/techs.css";
 
 /* utilities */
 
@@ -20,3 +21,4 @@
 @import "components/nav.css";
 @import "components/buttons.css";
 @import "components/bottom-marquee.css";
+@import "components/ads.css";
