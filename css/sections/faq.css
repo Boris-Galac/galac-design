@@ -1,0 +1,86 @@
+.faq {
+  position: relative;
+  isolation: isolate;
+}
+.faq::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: url("/assets/images/faq-overlay.png") no-repeat center
+    center/cover;
+  background-attachment: fixed;
+}
+.faq__wrapper {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.faq__btn {
+  cursor: pointer;
+  aspect-ratio: 1;
+  width: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+.drop {
+  position: relative;
+  width: 1.5rem;
+  background-color: var(--dark);
+  height: 2px;
+}
+.drop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 2px;
+  background-color: var(--dark);
+  height: 1.5rem;
+}
+.drop.active::after {
+  background-color: transparent;
+}
+.faq__question {
+  color: var(--dark);
+  font-weight: 400;
+  display: inline-flex;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+.faq__paragraph {
+  font-weight: 300;
+  transition: 0.5s;
+  transform-origin: top;
+  transform: scaleY(0);
+  pointer-events: none;
+  display: none;
+  animation: close-faq 0.5s forwards;
+}
+@keyframes close-faq {
+  from {
+    display: block;
+    transform: scaleY(1);
+  }
+  to {
+    display: none;
+    transform: scaleY(0);
+  }
+}
+.faq__paragraph.active {
+  transform: scaleY(1);
+  pointer-events: visible;
+  display: block;
+  animation: open-faq 0.5s forwards;
+}
+@keyframes open-faq {
+  from {
+    display: none;
+    transform: scaleY(0);
+  }
+  to {
+    display: block;
+    transform: scaleY(1);
+  }
+}

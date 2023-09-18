@@ -27,26 +27,41 @@
   justify-content: center;
   align-items: center;
 }
-.offfer-card {
+.offer-card {
   width: min(100%, 300px);
   border-radius: 0.5rem;
   overflow: hidden;
   border: 2px solid var(--white);
   transition: 0.8s;
 }
-.offfer-card:hover {
+.offer-card:hover {
   scale: 1.1;
 }
 .offer-card__header {
+  position: relative;
   background-color: var(--white);
   display: grid;
   place-items: center;
   padding-block: 1.5rem;
 }
+.offer-card__header::after {
+  content: "";
+  position: absolute;
+  background-color: var(--white);
+  aspect-ratio: 1;
+  width: 3rem;
+  box-shadow: -6px 15px 0 #393939;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+  border-top: 0;
+  left: 0;
+  bottom: 0;
+}
 .offer-card__header img {
   width: 10rem;
 }
 .offer-card__body {
+  position: relative;
   background: linear-gradient(
     138deg,
     #393939 19.19%,
@@ -54,4 +69,16 @@
   );
   padding: 1rem;
   height: 100%;
+}
+.offer-card__body::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  aspect-ratio: 1;
+  width: 3rem;
+  box-shadow: -6px 15px 0 #ffffff;
+  border-bottom-left-radius: 61%;
+  rotate: 180deg;
+  top: 0;
+  right: 0;
 }

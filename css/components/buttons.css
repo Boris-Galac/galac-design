@@ -40,3 +40,18 @@
   background-color: var(--yellow);
   z-index: 2;
 }
+.consult-mail__submit-btn {
+  background-color: hsl(120, 43%, 47%);
+  padding-block: 0.6rem;
+  padding-inline: 1rem;
+  margin-left: auto;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 100vmax;
+}
+.consult-mail__submit-btn:hover {
+  background-color: hsl(0, 0%, 33%);
+  color: var(--white);
+}

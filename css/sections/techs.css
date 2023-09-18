@@ -12,6 +12,7 @@
 .techs__marquee {
   display: flex;
   width: max-content;
+  white-space: nowrap;
   gap: 3rem;
   animation: marquee 20s linear infinite;
 }

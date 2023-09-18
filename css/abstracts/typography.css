@@ -127,3 +127,19 @@ span {
 .techs__heading {
   margin-inline: 1rem;
 }
+.faq__heading {
+  text-align: start;
+}
+.faq__heading::after {
+  left: 0;
+}
+.consult__heading {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.23);
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  text-align: center;
+}

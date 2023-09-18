@@ -43,3 +43,21 @@ innerWrapper.addEventListener("transitionend", (e) => {
   innerWrapper.style.transition = "none";
   innerWrapper.style.transform = "translateX(0)";
 });
+
+// FAQ
+
+const faqQuestion = document.querySelectorAll(".faq__question");
+faqQuestion.forEach((question) => {
+  question.addEventListener("click", (e) => {
+    const faq__paragraph = question.nextElementSibling;
+    const btn = question.firstElementChild;
+    const btnActive = btn.firstElementChild.classList.contains("active");
+    if (!btnActive) {
+      btn.firstElementChild.classList.add("active");
+      faq__paragraph.classList.add("active");
+    } else {
+      faq__paragraph.classList.remove("active");
+      btn.firstElementChild.classList.remove("active");
+    }
+  });
+});

@@ -38,15 +38,6 @@ figure {
 section {
   position: relative;
 }
-/* button {
-  position: relative;
-  cursor: pointer;
-  border: 0;
-  text-transform: uppercase;
-  color: var(--white);
-  width: max-content;
-  user-select: none;
-} */
 button {
   background-color: transparent;
   border: 0;

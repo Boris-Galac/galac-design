@@ -1,0 +1,46 @@
+.consult {
+  position: relative;
+  background: linear-gradient(88deg, #a8975c -3.8%, #d9b047 103.97%);
+  isolation: isolate;
+  padding-block: 10rem;
+}
+.consult::before {
+  content: "";
+  position: absolute;
+  background: url("/assets/images/websites-overlay.png") no-repeat center
+    center/contain;
+  inset: 0;
+  z-index: -2;
+}
+.consult::after {
+  content: "";
+  position: absolute;
+  background: url("/assets/images/laptop-overlay.png") no-repeat center
+    center/contain;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+.consult__wrapper {
+  display: grid;
+  place-items: center;
+}
+.consult-email {
+  background-color: var(--white);
+  border-radius: 100vmax;
+  overflow: hidden;
+  padding-left: 1rem;
+  border: 2px solid var(--white);
+  width: max(50vw, 300px);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  max-width: 25rem;
+}
+.consult-mail__email {
+  border: 0;
+  font-size: 1.2rem;
+  outline: 0;
+  padding: 0.8rem;
+  width: 200px;
+}
