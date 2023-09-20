@@ -68,13 +68,14 @@ span {
   letter-spacing: 1px;
 }
 .offer-card__text {
-  font-weight: 300;
+  font-weight: 200;
 }
 .yellow-text {
   color: var(--yellow);
   transition: 0.3s;
+  font-weight: 300;
 }
-.yellow-text:hover {
+.offer-card:hover .yellow-text {
   color: hsl(60, 100%, 50%);
   text-shadow: 0 0 16px hsl(60, 100%, 50%);
 }

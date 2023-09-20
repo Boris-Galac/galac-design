@@ -76,9 +76,14 @@
   background-color: transparent;
   aspect-ratio: 1;
   width: 3rem;
-  box-shadow: -6px 15px 0 #ffffff;
+  box-shadow: -6px 15px 0 var(--white);
   border-bottom-left-radius: 61%;
   rotate: 180deg;
   top: 0;
   right: 0;
+}
+@media (min-width: 1040px) {
+  .offer__wrapper {
+    align-items: stretch;
+  }
 }
