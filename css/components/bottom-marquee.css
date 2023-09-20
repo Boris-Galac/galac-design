@@ -31,3 +31,8 @@
     transform: translate(calc(-100% - 2rem));
   }
 }
+@media (min-width: 1024px) {
+  .infinite-slider {
+    width: 100%;
+  }
+}

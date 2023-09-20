@@ -36,6 +36,11 @@
   display: flex;
   align-items: center;
   max-width: 25rem;
+  transition: 0.3s;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.407);
+}
+.consult-email:hover {
+  box-shadow: 0 0 1rem white;
 }
 .consult-mail__email {
   border: 0;
@@ -43,4 +48,11 @@
   outline: 0;
   padding: 0.8rem;
   width: 200px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .consult {
+    padding-block: 12rem;
+  }
 }

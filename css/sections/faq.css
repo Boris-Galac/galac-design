@@ -15,7 +15,6 @@
   display: grid;
   gap: 2.5rem;
 }
-
 .faq__btn {
   cursor: pointer;
   aspect-ratio: 1;
@@ -25,7 +24,7 @@
 }
 .drop {
   position: relative;
-  width: 1.5rem;
+  width: 1rem;
   background-color: var(--dark);
   height: 2px;
 }
@@ -36,7 +35,7 @@
   margin: auto;
   width: 2px;
   background-color: var(--dark);
-  height: 1.5rem;
+  height: 1rem;
 }
 .drop.active::after {
   background-color: transparent;
@@ -48,6 +47,7 @@
   margin-bottom: 1rem;
   cursor: pointer;
   user-select: none;
+  gap: 2rem;
 }
 .faq__paragraph {
   font-weight: 300;
@@ -82,5 +82,15 @@
   to {
     display: block;
     transform: scaleY(1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+  .faq__heading {
+    margin-bottom: 6rem !important;
   }
 }

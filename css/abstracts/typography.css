@@ -49,6 +49,17 @@ span {
 .hero__subheadline {
   margin-bottom: 1.5rem;
   font-weight: 300;
+  animation: hero-subheadline 2s forwards;
+}
+@keyframes hero-subheadline {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .offer-card__heading {
   font-size: 1.375rem;
@@ -142,4 +153,11 @@ span {
   border-radius: 3px;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .solutions__heading {
+    margin-bottom: 4rem !important;
+    text-wrap: balance;
+  }
 }

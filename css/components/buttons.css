@@ -11,6 +11,18 @@
   width: max-content;
   transition: 0.3s;
   font-weight: 300;
+  opacity: 0;
+  animation: hero-cta 3s forwards;
+}
+@keyframes hero-cta {
+  from {
+    transform: translateX(6rem);
+  }
+  to {
+    transform: translateX(0);
+
+    opacity: 1;
+  }
 }
 .hero__cta:hover {
   border-radius: 150px;
@@ -33,12 +45,13 @@
 .solution-btn:hover {
   scale: 1.1;
   box-shadow: 0 0 30px var(--yellow);
+  border-radius: 100vmax;
 }
 .active-btn {
   outline: 2px solid var(--black);
   border-radius: 100vmax;
   background-color: var(--yellow);
-  z-index: 2;
+  z-index: 1;
 }
 .consult-mail__submit-btn {
   background-color: hsl(120, 43%, 47%);
@@ -54,4 +67,66 @@
 .consult-mail__submit-btn:hover {
   background-color: hsl(0, 0%, 33%);
   color: var(--white);
+}
+.scroll-down-btn {
+  position: absolute;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  left: 50%;
+  animation: scroll-down 1s alternate infinite ease-in-out;
+}
+@keyframes scroll-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(1rem);
+  }
+}
+/* scroll to top btn */
+.scroll-to-top-btn {
+  position: absolute;
+  background-color: var(--dark);
+  aspect-ratio: 1;
+  width: 50px;
+  border-radius: 100vmax;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transform: rotate(-45deg);
+}
+.scroll-to-top-btn:hover {
+  background-color: var(--black);
+}
+/* loader */
+.spin-loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  bottom: 3rem;
+  right: 3rem;
+  aspect-ratio: 1;
+  width: 60px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+.spin-loader img {
+  transform: rotate(45deg);
+}
+.spin-loader.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+.portfolio-btn {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.portfolio-btn:hover {
+  scale: 1.2;
+}
+.portfolio-btn img {
+  pointer-events: none;
 }

@@ -1,0 +1,95 @@
+.footer {
+  background-color: var(--footer-clr);
+}
+.footer a {
+  transition: 0.3s;
+  font-weight: 300;
+}
+.footer img {
+  object-fit: contain;
+}
+.footer a:hover {
+  scale: 1.1;
+}
+.footer__wrapper {
+  padding-inline: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer__logo {
+  width: 100%;
+  place-self: flex-start;
+}
+
+.footer--first-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  gap: 2rem;
+  width: min(100vw, 15rem);
+}
+.footer__list {
+  display: grid;
+  gap: 0.5rem;
+}
+.footer__item {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer__item img {
+  aspect-ratio: 1;
+  width: 18px;
+}
+.galac-design {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.naziv-obrta {
+  font-weight: 200;
+  font-size: 13px;
+  place-self: flex-end;
+}
+.iban {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+/* corporation  */
+.footer-all-rights {
+  background-color: var(--black);
+  padding: 2rem;
+}
+.footer-all-rights__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  perspective: 500px;
+}
+.footer-all-rights__col {
+  color: var(--white);
+}
+.footer-all-rights__col--last-col {
+  animation: naziv-obrt 5s linear infinite;
+}
+@keyframes naziv-obrt {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__wrapper {
+    padding-inline: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  .footer__logo {
+    width: auto;
+    place-self: flex-start;
+  }
+}

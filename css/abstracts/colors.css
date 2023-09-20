@@ -6,4 +6,6 @@
   --dark: hsl(210, 6%, 13%);
   --paragraph-clr: hsl(212, 9%, 37%);
   --gray: hsl(0, 0%, 78%);
+  --footer-clr: hsl(216, 44%, 19%);
+  --spinner-clr: hsl(60, 100%, 50%);
 }

@@ -15,7 +15,7 @@
 }
 .hero__left-col {
   position: relative;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  background-color: hsla(0, 0%, 0%, 0.4);
   height: 100%;
   display: grid;
 }
@@ -31,6 +31,9 @@
   display: grid;
   gap: 0.4rem;
   transition: 0.5s;
+}
+.nav__list .contact-mail {
+  display: none;
 }
 .contact-mail:hover {
   box-shadow: 0 0 1rem rgb(136, 47, 251);
@@ -55,7 +58,7 @@
   left: 60%;
   z-index: 1;
 }
-.logo {
+.hero__logo {
   grid-column: 1;
   justify-self: center;
   margin-top: 1rem;
@@ -64,15 +67,16 @@
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
-  padding: 1rem;
+  padding: 4vw;
 }
 .hero__wrapper::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 1rem;
+  left: 4vw;
   height: 4px;
   width: 15vw;
+  max-width: 10rem;
   background-color: var(--white);
 }
 .hero__vertical-author {
@@ -116,4 +120,80 @@
 }
 .socials-wrapper a:hover {
   scale: 1.5;
+}
+.hero__headline {
+  overflow: hidden;
+}
+.hero__headline-row {
+  transform: translateY(400%);
+  animation: headline 2.5s forwards;
+}
+@keyframes headline {
+  from {
+    transform: translateY(400%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .hero__logo {
+    position: relative;
+    grid-column: 1;
+    justify-self: center;
+    margin-top: 7%;
+    right: 30%;
+  }
+  .header {
+    position: fixed;
+    right: 0;
+    left: 30%;
+    z-index: 2;
+  }
+  .contact-mail {
+    border-radius: 6px;
+    background-color: rgba(33, 47, 52, 0.3);
+    padding: 0.5rem;
+    position: absolute;
+    transform: unset;
+    right: 0;
+    left: unset;
+    top: 10%;
+    width: max-content;
+    display: grid;
+    gap: 0.4rem;
+    transition: 0.5s;
+    grid-column: 2;
+  }
+  .hero .contact-mail {
+    display: none;
+  }
+  .nav__list .contact-mail {
+    display: none;
+  }
+  .hero__overlay-video {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+    scale: 1;
+  }
+  .hero__wrapper::before {
+    top: 2rem;
+  }
+}
+@media (min-width: 1240px) {
+  .nav__list .contact-mail {
+    position: static;
+    display: grid;
+  }
 }

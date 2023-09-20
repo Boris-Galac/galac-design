@@ -9,6 +9,7 @@ html,
 body {
   min-height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 img,
 picture,

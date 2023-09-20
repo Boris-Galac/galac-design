@@ -3,7 +3,7 @@
   background: url("/assets/images/portfolio-overlay-bg.jpg") no-repeat center
     center/cover;
   padding-inline: 1rem;
-  padding-block: 4rem;
+  padding-block: 6rem;
   isolation: isolate;
   background-attachment: fixed;
 }
@@ -28,16 +28,59 @@
   display: grid;
   gap: 4rem;
 }
+.portfolio__inner-wrapper {
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+.project-wrapper {
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  display: none;
+  transform: translateX(10rem);
+}
+.project-wrapper.current {
+  display: block;
+  z-index: 2;
+  margin-inline: auto;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 10%;
+  animation: current 1s forwards;
+}
+@keyframes current {
+  from {
+    display: none;
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  to {
+    opacity: 1;
+    display: block;
+    transform: translateX(-50%);
+  }
+}
 .portfolio__description-project {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
   margin-top: 7rem;
+  min-width: 330px;
 }
 .project-technologies {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+}
+.portfolio__btns {
+  position: absolute;
+  width: min(91%, 70rem);
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-50%, -50%);
+  top: 33%;
+  left: 50%;
+  z-index: 150;
 }
 
 /* web card */
@@ -53,22 +96,29 @@
   box-shadow: 0 15px 30px hsla(0, 0%, 0%, 0.3);
 }
 .web-card__see-more {
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  position: fixed;
   inset: auto 0;
   gap: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
   z-index: 2;
   background-color: hsla(205, 23%, 42%, 0.6);
+  transition: 0.3s;
+  display: none;
 }
 .web-card:hover {
   transform: perspective(800px) rotateX(20deg) rotateY(5deg) rotateZ(10deg)
     skewX(-3deg) skewX(-3deg) scale(1.3);
   box-shadow: 0 10px 30px hsl(20, 6%, 39%);
 }
+.web-card:hover .web-card__see-more {
+  display: flex;
+}
 .web-card:hover .web-card__img {
+  position: fixed;
   animation: scroll 2s alternate infinite linear;
 }
 .web-card:hover::after {
