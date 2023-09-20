@@ -41,6 +41,7 @@
 .nav__wrapper {
   display: grid;
   gap: 5vh;
+  padding: 2rem;
 }
 .nav__item {
   text-align: right;

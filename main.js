@@ -19,6 +19,17 @@ hamBtn.addEventListener("click", (e) => {
   }
 });
 
+// CLICK OUT OF NAV WRAPPER
+
+navList.addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) {
+    navList.setAttribute("data-visible", "false");
+    hamLine.forEach((line) => {
+      line.setAttribute("aria-expanded", "false");
+    });
+  } else return;
+});
+
 // AD AUTOMATIC SLIDER
 
 const carousel = document.querySelector(".ads");

@@ -85,6 +85,7 @@
   transform: translateY(-50%);
   bottom: 0;
   display: flex;
+  z-index: 2;
 }
 .hero__vertical-line {
   height: 20vh;
