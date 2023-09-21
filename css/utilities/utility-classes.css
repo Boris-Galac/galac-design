@@ -32,3 +32,114 @@
 .delay-4 {
   animation-delay: 1s;
 }
+/* intersection observer */
+
+/* from bottom opacity stagger */
+.hidden-bottom {
+  transform: translateY(50%);
+  opacity: 0;
+}
+.hidden-bottom.active {
+  animation: hidden-bottom 1.5s forwards;
+}
+@keyframes hidden-bottom {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .process-web__article:nth-child(1).active {
+    animation-delay: 0.3s;
+  }
+  .process-web__article:nth-child(2).active {
+    animation-delay: 0.6s;
+  }
+  .process-web__article:nth-child(3).active {
+    animation-delay: 0.9s;
+  }
+}
+
+/* from right opacity */
+.opacity {
+  transform: translateX(50%);
+  opacity: 0;
+}
+.opacity.opacity-full {
+  animation: opacity-full 1.5s forwards;
+}
+@keyframes opacity-full {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+/* from left opacity stagger */
+.hidden-left-stagger {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.hidden-left-stagger.active {
+  animation: active forwards 0.8s;
+}
+@keyframes active {
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .offer-card:nth-child(1).active {
+    animation-delay: 0.3s;
+  }
+  .offer-card:nth-child(2).active {
+    animation-delay: 0.6s;
+  }
+  .offer-card:nth-child(3).active {
+    animation-delay: 0.9s;
+  }
+}
+
+/* overlay */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.471);
+  z-index: 4;
+  cursor: pointer;
+}
+.overlay[data-visible="false"] {
+  animation: close-overlay 0.4s forwards;
+}
+@keyframes close-overlay {
+  from {
+    opacity: 1;
+    pointer-events: visible;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.overlay[data-visible="true"] {
+  animation: open-overlay 0.4s forwards;
+}
+@keyframes open-overlay {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: visible;
+  }
+}

@@ -8,11 +8,14 @@ hamBtn.addEventListener("click", (e) => {
   let navAttr = navList.getAttribute("data-visible");
   if (navAttr === "false") {
     navList.setAttribute("data-visible", "true");
+    navList.setAttribute("aria-expanded", "true");
+
     hamLine.forEach((line) => {
       line.setAttribute("aria-expanded", "true");
     });
   } else {
     navList.setAttribute("data-visible", "false");
+    navList.setAttribute("aria-expanded", "false");
     hamLine.forEach((line) => {
       line.setAttribute("aria-expanded", "false");
     });
@@ -198,3 +201,76 @@ function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
+
+///////// INTERSECTION OBSERVER
+
+// from left stagger
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+const leftStagger = document.querySelectorAll(".hidden-left-stagger");
+leftStagger.forEach((el) => observer.observe(el));
+// from bottom opacity stagger
+const bottomStagger = document.querySelectorAll(".hidden-bottom");
+bottomStagger.forEach((el) => observer.observe(el));
+
+// from right opacity
+
+const abc = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("opacity-full");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+const b = document.querySelectorAll(".opacity");
+b.forEach((el) => abc.observe(el));
+
+// O NAMA MODAL
+
+const linkOnama = document.querySelector("#o-nama");
+const modalOnama = document.querySelector(".o-nama");
+const overlay = document.querySelector(".overlay");
+
+linkOnama.addEventListener("click", (e) => {
+  const attrOnama = modalOnama.getAttribute("data-visible");
+  if (attrOnama === "false") {
+    overlay.setAttribute("data-visible", "true");
+    overlay.setAttribute("aria-expanded", "true");
+    modalOnama.setAttribute("data-visible", "true");
+    modalOnama.setAttribute("aria-expanded", "true");
+  } else {
+    overlay.setAttribute("data-visible", "false");
+    overlay.setAttribute("aria-expanded", "true");
+    modalOnama.setAttribute("data-visible", "false");
+    modalOnama.setAttribute("aria-expanded", "false");
+  }
+});
+
+overlay.addEventListener("click", (e) => {
+  overlay.setAttribute("data-visible", "false");
+  overlay.setAttribute("aria-expanded", "false");
+  modalOnama.setAttribute("aria-expanded", "false");
+  modalOnama.setAttribute("data-visible", "false");
+  navList.setAttribute("data-visible", "false");
+  navList.setAttribute("aria-expanded", "false");
+  hamLine.forEach((line) => {
+    line.setAttribute("aria-expanded", "false");
+  });
+  if (window.innerWidth >= 1024) {
+    navList.setAttribute("data-visible", "true");
+    navList.setAttribute("aria-expanded", "true");
+  }
+});

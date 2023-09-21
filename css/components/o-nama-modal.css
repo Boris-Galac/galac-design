@@ -1,0 +1,51 @@
+.o-nama {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  border-radius: 5px;
+  width: min(90%, 50rem);
+  min-width: 300px;
+  border: 2px solid rgba(255, 255, 255, 0.244);
+  box-shadow: 0 0 15px rgb(118, 189, 244);
+  perspective: 800px;
+}
+.o-nama__logo {
+  width: 250px;
+  margin-inline: auto;
+  animation: o-nama-logo 7s infinite linear;
+}
+@keyframes o-nama-logo {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.o-nama[data-visible="false"] {
+  animation: close-o-nama 0.5s forwards;
+}
+@keyframes close-o-nama {
+  from {
+    opacity: 1;
+    pointer-events: visible;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.o-nama[data-visible="true"] {
+  animation: open-o-nama 0.5s forwards;
+}
+@keyframes open-o-nama {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: visible;
+  }
+}

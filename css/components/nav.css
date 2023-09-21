@@ -12,6 +12,7 @@
   display: grid;
   place-items: center;
 }
+
 .nav__list[data-visible="false"] {
   animation: closeMenu 0.4s forwards;
 }
@@ -40,8 +41,9 @@
 }
 .nav__wrapper {
   display: grid;
-  gap: 5vh;
+  gap: 7vh;
   padding: 2rem;
+  width: max-content;
 }
 .nav__item {
   text-align: right;
@@ -50,6 +52,7 @@
   position: relative;
   font-size: 1.25rem;
   text-transform: uppercase;
+  width: max-content;
 }
 .nav__link::after {
   content: "";
@@ -120,11 +123,11 @@
     position: relative;
     background-color: hsla(0, 0%, 0%, 0.8);
     display: flex;
-    justify-content: center;
-    gap: 7rem;
+    justify-content: space-between;
   }
   .nav__wrapper {
     display: flex;
+    gap: 4vw;
   }
   .ham-btn {
     display: none;
