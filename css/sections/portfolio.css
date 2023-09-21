@@ -31,7 +31,7 @@
 .portfolio__inner-wrapper {
   display: flex;
   position: relative;
-  height: 100vh;
+  height: 160vh;
 }
 .project-wrapper {
   position: absolute;
@@ -158,5 +158,10 @@
   .web-card {
     width: 12rem;
     height: 20rem;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio__inner-wrapper {
+    height: 100vh;
   }
 }

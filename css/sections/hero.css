@@ -83,12 +83,12 @@
   position: fixed;
   right: 1rem;
   transform: translateY(-50%);
-  bottom: 0;
+  bottom: 2.5rem;
   display: flex;
   z-index: 2;
 }
 .hero__vertical-line {
-  height: 20vh;
+  height: 15vh;
   width: 5px;
   background-color: var(--white);
   background: linear-gradient(rgba(255, 255, 255, 0.01) 1%, white 99%);

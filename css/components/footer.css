@@ -44,6 +44,7 @@
 .galac-design {
   font-weight: 600;
   letter-spacing: 2px;
+  width: min-content;
 }
 .naziv-obrta {
   font-weight: 200;
@@ -91,5 +92,10 @@
   .footer__logo {
     width: auto;
     place-self: flex-start;
+  }
+  .galac-design {
+    font-weight: 600;
+    letter-spacing: 2px;
+    width: max-content;
   }
 }
