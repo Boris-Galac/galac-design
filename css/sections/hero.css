@@ -105,7 +105,7 @@
   position: absolute;
   display: flex;
   bottom: 10vh;
-  left: 12%;
+  left: 5vw;
   gap: 1rem;
 }
 .socials-wrapper a {
