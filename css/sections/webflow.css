@@ -1,0 +1,117 @@
+.webflow {
+  background: url("/assets/images/wf-overlay.jpg") no-repeat center center/cover;
+  padding-block: 4rem;
+}
+.webflow__heading-wrapper {
+  margin-bottom: 6rem;
+}
+.webflow--heading {
+  max-width: 50ch;
+  font-size: clamp(2rem, 7vw, 4rem);
+  line-height: 100%;
+  margin-bottom: 0.3rem;
+}
+.webflow__heading-2 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 100;
+}
+.webflow__heading-3 {
+  font-size: clamp(1.5rem, 15vw, 3rem);
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -1px;
+}
+.webflow__footer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 800px) {
+  .webflow-logo {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  .webflow__heading-2 {
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .webflow--heading {
+    width: max-content;
+  }
+  .webflow-logo {
+    width: min(30%, 25rem);
+  }
+}
+.wf-btn {
+  position: relative;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  background: #181819;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  isolation: isolate;
+  transition: 0.5s;
+  margin-right: 5rem;
+  cursor: pointer;
+}
+.wf-btn:hover {
+  outline: 1px solid #ffffff75;
+  outline-offset: 5px;
+}
+.wf-btn span {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 15%;
+}
+.wf-btn img {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 55%;
+  right: 8%;
+  width: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.wf-btn:hover img {
+  opacity: 1;
+}
+.wf-btn::after,
+.wf-btn::before {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1;
+}
+.wf-btn::before {
+  background-color: hsl(240, 68%, 44%);
+  right: 1rem;
+  width: 30px;
+  z-index: -1;
+  filter: blur(3px);
+  transition: 0.7s;
+  border-radius: 50%;
+}
+.wf-btn:hover::before {
+  right: 2rem;
+  width: 80px;
+  background-color: hsl(240, 39%, 43%);
+}
+.wf-btn::after {
+  background-color: hsl(11, 100%, 50%);
+  filter: blur(5px);
+  width: 38px;
+  bottom: 50%;
+  transition: 1.7s;
+  border-radius: 50%;
+  right: 0rem;
+}
+.wf-btn:hover::after {
+  width: 50px;
+  right: 5px;
+  background-color: hsl(42, 100%, 50%);
+}

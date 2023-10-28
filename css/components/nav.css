@@ -44,6 +44,7 @@
   gap: 7vh;
   padding: 2rem;
   width: max-content;
+  position: absolute;
 }
 .nav__item {
   text-align: right;
@@ -112,7 +113,7 @@
   transform: rotate(-45deg);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1920px) {
   .nav {
     padding: 1rem;
   }
@@ -128,6 +129,7 @@
   .nav__wrapper {
     display: flex;
     gap: 4vw;
+    position: static;
   }
   .ham-btn {
     display: none;

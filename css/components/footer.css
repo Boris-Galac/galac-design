@@ -21,7 +21,6 @@
   width: 100%;
   place-self: flex-start;
 }
-
 .footer--first-col {
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +53,9 @@
 .iban {
   font-weight: 200;
   letter-spacing: 1px;
+}
+.footer .socials-wrapper {
+  position: static;
 }
 /* corporation  */
 .footer-all-rights {

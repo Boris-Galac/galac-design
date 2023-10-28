@@ -17,7 +17,6 @@
   width: 48px;
 }
 .solutions__webdesign-img--height-second-row {
-  /* height: 310px; */
   height: 200px;
 }
 .solutions__webdesign-img--height-first-row {
@@ -26,7 +25,9 @@
 .solutions__article-wrapper {
   flex: 1;
   display: grid;
+  height: max-content;
   gap: 2rem;
+  place-self: center;
 }
 .process-web {
   padding-block: 2rem;

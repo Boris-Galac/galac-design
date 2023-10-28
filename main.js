@@ -76,18 +76,18 @@ faqQuestion.forEach((question) => {
   });
 });
 
-// SHOW MENU ABOVE 1024PX DATA VISIBLE TRUE
+// SHOW MENU ABOVE 1920PX DATA VISIBLE TRUE
 
 window.addEventListener("resize", (e) => {
   const nav = document.querySelector(".nav__list");
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > 1920) {
     nav.setAttribute("data-visible", "true");
   } else {
     nav.setAttribute("data-visible", "false");
   }
 });
 window.addEventListener("DOMContentLoaded", (e) => {
-  if (window.innerWidth > 1024)
+  if (window.innerWidth > 1920)
     document.querySelector(".nav__list").setAttribute("data-visible", "true");
 });
 
@@ -150,9 +150,9 @@ const prevPortfolioSlide = () => {
   }
 };
 
-prevBtn.addEventListener("click", nextPortfolioSlide);
+prevBtn.addEventListener("click", prevPortfolioSlide);
 
-nextBtn.addEventListener("click", prevPortfolioSlide);
+nextBtn.addEventListener("click", nextPortfolioSlide);
 
 // OFFER TABS
 
@@ -273,4 +273,67 @@ overlay.addEventListener("click", (e) => {
     navList.setAttribute("data-visible", "true");
     navList.setAttribute("aria-expanded", "true");
   }
+});
+
+// OVERLAY FUNCTION
+
+function createOverlay(element) {
+  let overlay = document.createElement("div");
+  overlay.setAttribute("class", "overlay overlay--darker");
+  overlay.setAttribute("data-visible", "true");
+  overlay.setAttribute("aria-expanded", "true");
+  overlay.append(element);
+  document.body.append(overlay);
+  overlay.addEventListener("click", (e) => {
+    if (e.target !== e.currentTarget) return;
+
+    overlay.setAttribute("data-visible", "false");
+    overlay.addEventListener("animationend", (e) => {
+      overlay.remove();
+    });
+  });
+}
+
+let webSolutionsBtnbs = document.querySelectorAll(".web-solution-btn");
+webSolutionsBtnbs.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const obj = [
+      {
+        id: "custom-code",
+        text: `Custom code rješenje je rješenje koje naš tim prihvaća jedino ukoliko to izričito kupac želi, što zbog potrebnog transparentnog koda na Github u i daljnje, moguće aplikativne nadogradnje, a što zbog određenih detalja koje primjerice neki page builderi ne mogu izvesti.`,
+        img: "/assets/images/custom-code-tab.svg",
+      },
+      {
+        id: "wordpress",
+        text: `WordPress je najpoznatija platforma za izradu web stranica i blogova. Omogućava korisnicima lako prilagodljiv izgled i funkcionalnost svojih web stranica. WordPress je jednostavan za upotrebu i podržava upravljanje sadržajem putem CMS-a, uključujući blogove, galerije i e-trgovinu. Sa velikom zajednicom i bogatim ekosistemom, WordPress je popularan izbor za razvoj web stranica svih vrsta, od osobnih blogova do korporativnih sajtova i online shopova.`,
+        img: "/assets/images/wp-tab.svg",
+      },
+      {
+        id: "webflow",
+        text: `Webflow je visokokvalitetna platforma za izradu web stranica koja kombinira jednostavan vizualni dizajn s naprednim mogućnostima kodiranja. Sa svojim vizualnim alatom, korisnici mogu brzo kreirati privlačne web stranice, bez potrebe za pisanjem koda. Takođe pruža funkcionalnosti kao što su CMS za upravljanje sadržajem, responsivni dizajn za prilagodbu na različite uređaje, interaktivne animacije i hosting. Webflow takođe omogućava prilagodljivost i kontrolu putem pristupa kodu za one sa više tehničkog iskustva. Svi ovi elementi čine Webflow popularnim izborom za razvoj web stranica.`,
+        img: "/assets/images/webflow-tab.svg",
+      },
+    ];
+    const modal = document.createElement("div");
+    const modalImg = document.createElement("img");
+    modal.classList.add("web-modal");
+    modal.setAttribute("aria-expanded", "true");
+    modal.setAttribute("aria-label", "Web solutions for you");
+    const paragraph = document.createElement("p");
+    paragraph.classList.add("solution--webdesign-paragraph");
+    const abc = btn.dataset.tab;
+    const hej = obj.find((obj) => obj.id === abc);
+    paragraph.innerText = hej.text;
+    modalImg.src = hej.img;
+    modal.append(modalImg, paragraph);
+    createOverlay(modal);
+  });
+});
+
+// WF BTN
+
+const wfBtn = document.querySelector(".wf-btn");
+wfBtn.addEventListener("click", (e) => {
+  const targetUrl = "https://webflow.com/";
+  window.open(targetUrl, "_blank");
 });

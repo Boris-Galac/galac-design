@@ -116,6 +116,8 @@
   background-color: hsla(0, 0%, 0%, 0.471);
   z-index: 4;
   cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 .overlay[data-visible="false"] {
   animation: close-overlay 0.4s forwards;
@@ -142,4 +144,32 @@
     opacity: 1;
     pointer-events: visible;
   }
+}
+.overlay--darker {
+  background-color: hsla(0, 0%, 0%, 0.8);
+}
+.web-modal {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  background-color: hsla(0, 0%, 0%, 0.792);
+  padding: 2rem;
+  width: min(90vw, 30rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem 5px hsl(205, 100%, 60%);
+  outline: 2px solid hsl(240, 93%, 52%);
+  transition: 0.3s;
+}
+.web-modal:hover {
+  box-shadow: 0 0 1.5rem 5px hsl(205, 100%, 60%);
+  outline: 5px solid hsl(234, 100%, 54%);
+}
+
+.web-modal img {
+  order: 2;
+  background: #ffffff;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
 }

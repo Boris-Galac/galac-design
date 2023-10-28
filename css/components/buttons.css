@@ -139,3 +139,23 @@
     animation: scroll-down 1s alternate infinite ease-in-out;
   }
 }
+.web-solution-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  width: max(100%, 15rem);
+  max-width: 30rem;
+  background-color: hsl(0, 0%, 93%);
+  height: max-content;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.web-solution-btn:hover {
+  background-color: hsl(0, 0%, 95%);
+  outline: 1px solid hsl(0, 0%, 90%);
+}
+.web-solution-inside-btn-img {
+  width: 170px;
+}

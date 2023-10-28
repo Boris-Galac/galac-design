@@ -5,8 +5,14 @@
     <meta name="description" content="Dobrodošli na website obrta za računalno programiranje 'GALAC-DESIGN'. Obrt se u prvom planu bavi dizajnom i izradom web stranica, web shopova, grafičkim dizajnom, izradom grafičkih materijala, i marketingom. Nadam se da će te na ovoj web lokaciji pronaći najbolje rješenje za svoj business.">
     <meta name="author" content="GALAC-DESIGN">
     <meta name="keywords" content="Web dizajn, web development, grafički dizajn, letak, vizitka, brošura, web stranica, webshop, logotip, logo">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:image" content="https://www.boris-galac.com/assets/images/logo.png" />
+    <meta property="og:image:width" content="1434" />
+    <meta property="og:image:height" content="1433" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:url" content="https://www.galac-design.hr">
-    <meta property="og:description" content="Your Page Description">
+    <meta property="og:description" content="Dobrodošli na website obrta za računalno programiranje 'GALAC-DESIGN'. Obrt se u prvom planu bavi dizajnom i izradom web stranica, web shopova, grafičkim dizajnom, izradom grafičkih materijala, i marketingom. Nadam se da će te na ovoj web lokaciji pronaći najbolje rješenje za svoj business.">
     <script defer src="main.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="/assets/icons/favico.png" type="image/x-icon">
@@ -37,7 +43,10 @@
               <a class="nav__link" href="#offer">Usluge</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#portfolio">Portfolio</a>
+              <a class="nav__link" href="#portfolio">Web Portfolio</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#faq">Grafički dizajn</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#faq">Često postavljena pitanja</a>
@@ -91,7 +100,7 @@
               <img src="/assets/images/logo.svg" alt="logo of galac-design" />
             </a>
           </div>
-          <div class="contact-mail">
+          <div class="contact-mail contact-mail--left">
             <div class="contact-mail__wrapper">
               <img src="/assets/icons/mail-icon.svg" aria-hidden="true" />
               <a href="mailto:boris.galac@gmail.com">boris.galac@gmail.com</a>
@@ -164,7 +173,7 @@
               <span class="slide-text">logo</span>
             </li>
             <li class="infinite__slider__slide">
-              <span class="slide-text">banneri</span>
+              <span class="slide-text">webflow</span>
             </li>
           </ul>
           <ul class="infinite-slider__wrapper">
@@ -184,7 +193,7 @@
               <span class="slide-text">logo</span>
             </li>
             <li class="infinite__slider__slide">
-              <span class="slide-text">banneri</span>
+              <span class="slide-text">webflow</span>
             </li>
           </ul>
           <ul class="infinite-slider__wrapper">
@@ -204,7 +213,7 @@
               <span class="slide-text">logo</span>
             </li>
             <li class="infinite__slider__slide">
-              <span class="slide-text">banneri</span>
+              <span class="slide-text">webflow</span>
             </li>
           </ul>
           <ul class="infinite-slider__wrapper">
@@ -310,61 +319,25 @@
             <button class="solution-btn" data-tab-target="#marketing">društvene mreže</button>
           </div>
           <div class="solutions__wrapper opacity mb-4 active" id="web" data-tab-content>
-            <h2 class="solutions__heading h2--heading dark-text mb-1">
+            <h2 class="solutions__heading h2--heading dark-text mb-4">
               Izrađujemo kvalitetne web stranice i shopove po Vašoj mjeri
             </h2>
             <div class="solutions__inner-wrapper">
+              <div class="solutions__article-wrapper">
+                <button class="web-solution-btn" data-tab="custom-code"><img class="web-solution-inside-btn-img" src="/assets/images/custom-code-tab.svg" aria-hidden="true" >
+                <img src="/assets/icons/web-tab-plus-icon.svg"></button>
+                <button class="web-solution-btn" data-tab="wordpress"><img class="web-solution-inside-btn-img" src="/assets/images/wp-tab.svg" aria-hidden="true">
+                <img src="/assets/icons/web-tab-plus-icon.svg"></button>
+                <button class="web-solution-btn" data-tab="webflow"><img class="web-solution-inside-btn-img" src="/assets/images/webflow-tab.svg" aria-hidden="true">
+                <img src="/assets/icons/web-tab-plus-icon.svg"></button>
+              </div> 
               <figure class="solutions__webdesign-img-wrapper solutions__webdesign-img--height-first-row">
                 <img
                   src="/assets/images/web-solution-img.png"
                   alt="web design image"
-                  class="solutions__webdesign-img "
+                  class="solutions__webdesign-img"
                 />
               </figure>
-              <div class="solutions__article-wrapper">
-                <article class="solutions__webdesign-article">
-                  <img
-                    src="/assets/icons/clarity-design-icon.svg"
-                    alt="clarity design icon"
-                  />
-                  <p class="paragraph-dark">
-                    Dizajn web stranice igra ključnu ulogu u stvaranju prvog dojma
-                    kod posjetitelja i utječe na njihovu interakciju s sadržajem.
-                    <strong>Kvalitetan dizajn</strong> može znatno poboljšati
-                    korisničko iskustvo i povećati uspješnost web stranice.
-                  </p>
-                </article>
-                <article class="solutions__webdesign-article">
-                  <img
-                    src="/assets/icons/code-icon.svg"
-                    alt="clarity design icon"
-                  />
-                  <p class="paragraph-dark">
-                    Ne koristimo magične web buildere koji se nude na tržištu i
-                    pružaju website ili shop u nekoliko klikova. Naš tim je
-                    stručan u ovom polju i nema sumnje da ćemo Vam
-                    <strong
-                      >ručno iskodirati cijelu web stranicu ili web shop</strong
-                    >
-                    . Otvoreni i transparentni kod dobijete ukoliko želite nakon
-                    izrade.
-                  </p>
-                </article>
-                <article class="solutions__webdesign-article">
-                  <img
-                    src="/assets/icons/security-icon.svg"
-                    alt="clarity design icon"
-                  />
-                  <p class="paragraph-dark">
-                    <strong>Sigurnost i održavanje</strong> web stranice su od
-                    suštinskog značaja za zaštitu od potencijalnih prijetnji i
-                    očuvanje njenog besprijekornog funkcioniranja. Redovno
-                    ažuriranje softwarea, praćenje sigurnosnih propusta te brza
-                    reakcija na potencijalne probleme osiguravaju stabilnost i
-                    pouzdanost vaše web stranice.
-                  </p>
-                </article>
-              </div>
             </div>
           </div>
           <div class="solutions__wrapper opacity mb-4" id="graphic" data-tab-content>
@@ -515,6 +488,20 @@
           </div>
         </div>
       </section>
+      <!-- WEBFLOW SECTION -->
+      <section class="webflow">
+        <div class="container">
+          <div class="webflow__heading-wrapper">
+            <h2 class="webflow--heading">PREMIUM WEB STRANICE I SHOPOVI</h2>
+            <span class="webflow__heading-2">na platformi</span>
+            <span class="webflow__heading-3">Webflow</span>
+          </div>
+          <div class="webflow__footer">
+            <button class="wf-btn">Saznaj što je Webflow</button>
+              <img src="/assets/images/webflow-logo.svg" alt="webflow logo" class="webflow-logo">
+          </div>
+        </div>
+      </section>
       <!-- PORTFOLIO SECTION -->
       <section class="portfolio" id="portfolio">
         <div class="container">
@@ -528,224 +515,226 @@
             </button>
           </div>
           <div class="portfolio__wrapper">
-            <div class="portfolio__inner-wrapper">
-              <!-- project - aljmas-->
-              <div class="project-wrapper current">
-                <figure class="web-card">
-                  <a target="_blank" href="https://svetiste-aljmas.hr/" class="web-card__see-more"
-                    ><img src="/assets/icons/eye-icon.svg"  aria-hidden="true" />
-                    Pogledaj website</a
-                  >
-                  <img
-                    src="/assets/images/svetiste-aljmas-image.png"
-                    alt="image of web page 'Svetiste aljmas'"
-                    class="web-card__img"
-                  />
-                </figure>
-                <div class="portfolio__description-project">
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">ime projekta</span>
-                    <h3 class="project-name">Svetište Gospe od Utočišta u Aljmašu</h3>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">tip projekta</span>
-                    <h4 class="project-type">Prezentacijska stranica</h4>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label text-center">korištene tehnologije</span>
-                    <div class="project-technologies">
-                      <span class="project-tech">
-                        <img src="/assets/icons/html.png" alt="html icon" />
-                        html
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/icons/css.png" alt="css icon" />
-                        css
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/icons/js.png" alt="js icon" />
-                        js
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/images/php-tech.png" alt="php icon" />
-                        Php
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/images/wp-tech.png" alt="wp icon" />
-                        Wordpress
-                      </span>
+            <div class="portfolio__outter-wrapper">
+              <div class="portfolio__inner-wrapper">
+                <!-- project - aljmas-->
+                <div class="project-wrapper current">
+                  <figure class="web-card">
+                    <a target="_blank" href="https://svetiste-aljmas.hr/" class="web-card__see-more"
+                      ><img src="/assets/icons/eye-icon.svg"  aria-hidden="true" />
+                      Pogledaj website</a
+                    >
+                    <img
+                      src="/assets/images/svetiste-aljmas-image.png"
+                      alt="image of web page 'Svetiste aljmas'"
+                      class="web-card__img"
+                    />
+                  </figure>
+                  <div class="portfolio__description-project">
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">ime projekta</span>
+                      <h3 class="project-name">Svetište Gospe od Utočišta u Aljmašu</h3>
                     </div>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">Opis projekta</span>
-                    <h3 class="project-desc">
-                      Ovaj website je rađen za župu i svetište 'Svetište Gospe od Utočišta u Aljmašu'. Jedan lijep i poseban projekt koji je zahtijevao posebnu pažnju i profesionalnost. Radi se o ručnom kodiranju i krajnjem povezivanju s cms Wordpressom da bi se redoviti sadržaj unosio lakše.
-                    </h3>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">tip projekta</span>
+                      <h4 class="project-type">Prezentacijska stranica</h4>
+                    </div>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label text-center">korištene tehnologije</span>
+                      <div class="project-technologies">
+                        <span class="project-tech">
+                          <img src="/assets/icons/html.png" alt="html icon" />
+                          html
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/icons/css.png" alt="css icon" />
+                          css
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/icons/js.png" alt="js icon" />
+                          js
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/images/php-tech.png" alt="php icon" />
+                          Php
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/images/wp-tech.png" alt="wp icon" />
+                          Wordpress
+                        </span>
+                      </div>
+                    </div>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">Opis projekta</span>
+                      <h3 class="project-desc">
+                        Ovaj website je rađen za župu i svetište 'Svetište Gospe od Utočišta u Aljmašu'. Jedan lijep i poseban projekt koji je zahtijevao posebnu pažnju i profesionalnost. Radi se o ručnom kodiranju i krajnjem povezivanju s cms Wordpressom da bi se redoviti sadržaj unosio lakše.
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- project - portfolio boris galac-->
-              <div class="project-wrapper">
-                <figure class="web-card">
-                  <a target="_blank" href="https://www.boris-galac.com/" class="web-card__see-more"
-                    ><img src="/assets/icons/eye-icon.svg"  aria-hidden="true" />
-                    Pogledaj website</a
-                  >
-                  <img
-                    src="/assets/images/portfolio-image.png"
-                    alt="image of web page 'Portfolio Boris Galac'"
-                    class="web-card__img"
-                  />
-                </figure>
-                <div class="portfolio__description-project">
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">ime projekta</span>
-                    <h3 class="project-name">Boris Galac</h3>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">tip projekta</span>
-                    <h4 class="project-type">Portfolio page</h4>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label text-center">korištene tehnologije</span>
-                    <div class="project-technologies">
-                      <span class="project-tech">
-                        <img src="/assets/icons/html.png" alt="html icon" />
-                        html
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/icons/css.png" alt="css icon" />
-                        css
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/icons/js.png" alt="js icon" />
-                        js
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/images/php-tech.png" alt="php icon" />
-                        Php
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/images/wp-tech.png" alt="wp icon" />
-                        Wordpress
-                      </span>
+                <!-- project - portfolio boris galac-->
+                <div class="project-wrapper">
+                  <figure class="web-card">
+                    <a target="_blank" href="https://www.boris-galac.com/" class="web-card__see-more"
+                      ><img src="/assets/icons/eye-icon.svg"  aria-hidden="true" />
+                      Pogledaj website</a
+                    >
+                    <img
+                      src="/assets/images/portfolio-image.png"
+                      alt="image of web page 'Portfolio Boris Galac'"
+                      class="web-card__img"
+                    />
+                  </figure>
+                  <div class="portfolio__description-project">
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">ime projekta</span>
+                      <h3 class="project-name">Boris Galac</h3>
                     </div>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">Opis projekta</span>
-                    <h3 class="project-desc">
-                      Naime, radi se o našem posebnom projektu koji predstavlja rad i kratak opis developera i dizajnera Borisa Galca. Website, kao i svaki drugi je ručno dizajniran i iskodiran, i također za spomenuti, web je na engleskom jeziku jer je namijenjen zaposlenju i stranom freelance tržištu, premda hrvatsko nije izostavljeno.
-                    </h3>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">tip projekta</span>
+                      <h4 class="project-type">Portfolio page</h4>
+                    </div>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label text-center">korištene tehnologije</span>
+                      <div class="project-technologies">
+                        <span class="project-tech">
+                          <img src="/assets/icons/html.png" alt="html icon" />
+                          html
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/icons/css.png" alt="css icon" />
+                          css
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/icons/js.png" alt="js icon" />
+                          js
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/images/php-tech.png" alt="php icon" />
+                          Php
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/images/wp-tech.png" alt="wp icon" />
+                          Wordpress
+                        </span>
+                      </div>
+                    </div>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">Opis projekta</span>
+                      <h3 class="project-desc">
+                        Naime, radi se o našem posebnom projektu koji predstavlja rad i kratak opis developera i dizajnera Borisa Galca. Website, kao i svaki drugi je ručno dizajniran i iskodiran, i također za spomenuti, web je na engleskom jeziku jer je namijenjen zaposlenju i stranom freelance tržištu, premda hrvatsko nije izostavljeno.
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- project - modra nit-->
-              <div class="project-wrapper">
-                <figure class="web-card">
-                  <a target="_blank" href="https://modranit.hr/" class="web-card__see-more"
-                    ><img src="/assets/icons/eye-icon.svg" aria-hidden="true" />
-                    Pogledaj website</a
-                  >
-                  <img
-                    src="/assets/images/modra-nit-image.png"
-                    alt="image of web page 'Modra nit'"
-                    class="web-card__img"
-                  />
-                </figure>
-                <div class="portfolio__description-project">
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">ime projekta</span>
-                    <h3 class="project-name">Modra nit</h3>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">tip projekta</span>
-                    <h4 class="project-type">Prezentacijska stranica</h4>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label text-center">korištene tehnologije</span>
-                    <div class="project-technologies">
-                      <span class="project-tech">
-                        <img src="/assets/icons/html.png" alt="html icon" />
-                        html
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/icons/css.png" alt="css icon" />
-                        css
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/icons/js.png" alt="js icon" />
-                        js
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/images/php-tech.png" alt="php icon" />
-                        Php
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/images/wp-tech.png" alt="wp icon" />
-                        Wordpress
-                      </span>
+                <!-- project - modra nit-->
+                <div class="project-wrapper">
+                  <figure class="web-card">
+                    <a target="_blank" href="https://modranit.hr/" class="web-card__see-more"
+                      ><img src="/assets/icons/eye-icon.svg" aria-hidden="true" />
+                      Pogledaj website</a
+                    >
+                    <img
+                      src="/assets/images/modra-nit-image.png"
+                      alt="image of web page 'Modra nit'"
+                      class="web-card__img"
+                    />
+                  </figure>
+                  <div class="portfolio__description-project">
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">ime projekta</span>
+                      <h3 class="project-name">Modra nit</h3>
                     </div>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">Opis projekta</span>
-                    <h3 class="project-desc">
-                      LAgencija je za marketing specijalizirana za vidljivost EU projekata. Osnivač i jedini vlasnik Modre niti je Udruga za kreativni razvoj Slap iz Osijeka, koja se od 2000. godine bavi socijalnim poduzetništvom.
-                    </h3>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">tip projekta</span>
+                      <h4 class="project-type">Prezentacijska stranica</h4>
+                    </div>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label text-center">korištene tehnologije</span>
+                      <div class="project-technologies">
+                        <span class="project-tech">
+                          <img src="/assets/icons/html.png" alt="html icon" />
+                          html
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/icons/css.png" alt="css icon" />
+                          css
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/icons/js.png" alt="js icon" />
+                          js
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/images/php-tech.png" alt="php icon" />
+                          Php
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/images/wp-tech.png" alt="wp icon" />
+                          Wordpress
+                        </span>
+                      </div>
+                    </div>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">Opis projekta</span>
+                      <h3 class="project-desc">
+                        LAgencija je za marketing specijalizirana za vidljivost EU projekata. Osnivač i jedini vlasnik Modre niti je Udruga za kreativni razvoj Slap iz Osijeka, koja se od 2000. godine bavi socijalnim poduzetništvom.
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- project - slap-->
-              <div class="project-wrapper">
-                <figure class="web-card">
-                  <a target="_blank" href="https://slap.hr/" class="web-card__see-more"
-                    ><img src="/assets/icons/eye-icon.svg" aria-hidden="true" />
-                    Pogledaj website</a
-                  >
-                  <img
-                    src="/assets/images/slap-image.png"
-                    alt="image of web page 'Slap'"
-                    class="web-card__img"
-                  />
-                </figure>
-                <div class="portfolio__description-project">
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">ime projekta</span>
-                    <h3 class="project-name">Udruga "Slap"</h3>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">tip projekta</span>
-                    <h4 class="project-type">Prezentacijska stranica</h4>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label text-center">korištene tehnologije</span>
-                    <div class="project-technologies">
-                      <span class="project-tech">
-                        <img src="/assets/icons/html.png" alt="html icon" />
-                        html
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/icons/css.png" alt="css icon" />
-                        css
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/icons/js.png" alt="js icon" />
-                        js
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/images/php-tech.png" alt="php icon" />
-                        Php
-                      </span>
-                      <span class="project-tech">
-                        <img src="/assets/images/wp-tech.png" alt="wp icon" />
-                        Wordpress
-                      </span>
+                <!-- project - slap-->
+                <div class="project-wrapper">
+                  <figure class="web-card">
+                    <a target="_blank" href="https://slap.hr/" class="web-card__see-more"
+                      ><img src="/assets/icons/eye-icon.svg" aria-hidden="true" />
+                      Pogledaj website</a
+                    >
+                    <img
+                      src="/assets/images/slap-image.png"
+                      alt="image of web page 'Slap'"
+                      class="web-card__img"
+                    />
+                  </figure>
+                  <div class="portfolio__description-project">
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">ime projekta</span>
+                      <h3 class="project-name">Udruga "Slap"</h3>
                     </div>
-                  </div>
-                  <div class="name-of-project-wrapper">
-                    <span class="project-label">Opis projekta</span>
-                    <h3 class="project-desc">
-                      Udruga za kreativni razvoj Slap iz Osijeka organizacija je koja se bavi razvojnim projektima kroz koje potiče socijalno zapošljavanje, društveno odgovorno poslovanje, međusektorsku suradnju te kroz svoj trening centar radi na održivosti organizacija civilnog društva.
-                    </h3>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">tip projekta</span>
+                      <h4 class="project-type">Prezentacijska stranica</h4>
+                    </div>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label text-center">korištene tehnologije</span>
+                      <div class="project-technologies">
+                        <span class="project-tech">
+                          <img src="/assets/icons/html.png" alt="html icon" />
+                          html
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/icons/css.png" alt="css icon" />
+                          css
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/icons/js.png" alt="js icon" />
+                          js
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/images/php-tech.png" alt="php icon" />
+                          Php
+                        </span>
+                        <span class="project-tech">
+                          <img src="/assets/images/wp-tech.png" alt="wp icon" />
+                          Wordpress
+                        </span>
+                      </div>
+                    </div>
+                    <div class="name-of-project-wrapper">
+                      <span class="project-label">Opis projekta</span>
+                      <h3 class="project-desc">
+                        Udruga za kreativni razvoj Slap iz Osijeka organizacija je koja se bavi razvojnim projektima kroz koje potiče socijalno zapošljavanje, društveno odgovorno poslovanje, međusektorsku suradnju te kroz svoj trening centar radi na održivosti organizacija civilnog društva.
+                      </h3>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -793,6 +782,11 @@
                 src="/assets/images/figma-tech.png"
                 alt="figma"
               />
+              <img
+                class="techs__img"
+                src="/assets/images/wf-tech.png"
+                alt="webflow"
+              />
             </div>
             <div class="techs__content">
               <img
@@ -807,6 +801,86 @@
                 src="/assets/images/react-tech.png"
                 alt="react"
               />
+              <img class="techs__img" src="/assets/images/php-tech.png" alt="php" />
+              <img
+                class="techs__img"
+                src="/assets/images/wp-tech.png"
+                alt="wordpress"
+              />
+              <img
+                class="techs__img"
+                src="/assets/images/ps-tech.png"
+                alt="photoshop"
+              />
+              <img
+                class="techs__img"
+                src="/assets/images/illustrator-tech.png"
+                alt="illustrator"
+              />
+              <img
+                class="techs__img"
+                src="/assets/images/figma-tech.png"
+                alt="figma"
+              />
+            </div>
+            <img
+            class="techs__img"
+            src="/assets/images/wf-tech.png"
+            alt="webflow"
+          />
+            <div class="techs__content">
+              <img
+                class="techs__img"
+                src="/assets/images/html-tech.png"
+                alt="html"
+              />
+              <img class="techs__img" src="/assets/images/css-tech.png" alt="css" />
+              <img class="techs__img" src="/assets/images/js-tech.png" alt="js" />
+              <img
+                class="techs__img"
+                src="/assets/images/react-tech.png"
+                alt="react"
+              />
+              <img class="techs__img" src="/assets/images/php-tech.png" alt="php" />
+              <img
+                class="techs__img"
+                src="/assets/images/wp-tech.png"
+                alt="wordpress"
+              />
+              <img
+                class="techs__img"
+                src="/assets/images/ps-tech.png"
+                alt="photoshop"
+              />
+              <img
+                class="techs__img"
+                src="/assets/images/illustrator-tech.png"
+                alt="illustrator"
+              />
+              <img
+                class="techs__img"
+                src="/assets/images/figma-tech.png"
+                alt="figma"
+              />
+            </div>
+            <div class="techs__content">
+              <img
+                class="techs__img"
+                src="/assets/images/html-tech.png"
+                alt="html"
+              />
+              <img class="techs__img" src="/assets/images/css-tech.png" alt="css" />
+              <img class="techs__img" src="/assets/images/js-tech.png" alt="js" />
+              <img
+                class="techs__img"
+                src="/assets/images/react-tech.png"
+                alt="react"
+              />
+              <img
+              class="techs__img"
+              src="/assets/images/wf-tech.png"
+              alt="webflow"
+            />
               <img class="techs__img" src="/assets/images/php-tech.png" alt="php" />
               <img
                 class="techs__img"
@@ -889,75 +963,10 @@
                 alt="photoshop"
               />
               <img
-                class="techs__img"
-                src="/assets/images/illustrator-tech.png"
-                alt="illustrator"
-              />
-              <img
-                class="techs__img"
-                src="/assets/images/figma-tech.png"
-                alt="figma"
-              />
-            </div>
-            <div class="techs__content">
-              <img
-                class="techs__img"
-                src="/assets/images/html-tech.png"
-                alt="html"
-              />
-              <img class="techs__img" src="/assets/images/css-tech.png" alt="css" />
-              <img class="techs__img" src="/assets/images/js-tech.png" alt="js" />
-              <img
-                class="techs__img"
-                src="/assets/images/react-tech.png"
-                alt="react"
-              />
-              <img class="techs__img" src="/assets/images/php-tech.png" alt="php" />
-              <img
-                class="techs__img"
-                src="/assets/images/wp-tech.png"
-                alt="wordpress"
-              />
-              <img
-                class="techs__img"
-                src="/assets/images/ps-tech.png"
-                alt="photoshop"
-              />
-              <img
-                class="techs__img"
-                src="/assets/images/illustrator-tech.png"
-                alt="illustrator"
-              />
-              <img
-                class="techs__img"
-                src="/assets/images/figma-tech.png"
-                alt="figma"
-              />
-            </div>
-            <div class="techs__content">
-              <img
-                class="techs__img"
-                src="/assets/images/html-tech.png"
-                alt="html"
-              />
-              <img class="techs__img" src="/assets/images/css-tech.png" alt="css" />
-              <img class="techs__img" src="/assets/images/js-tech.png" alt="js" />
-              <img
-                class="techs__img"
-                src="/assets/images/react-tech.png"
-                alt="react"
-              />
-              <img class="techs__img" src="/assets/images/php-tech.png" alt="php" />
-              <img
-                class="techs__img"
-                src="/assets/images/wp-tech.png"
-                alt="wordpress"
-              />
-              <img
-                class="techs__img"
-                src="/assets/images/ps-tech.png"
-                alt="photoshop"
-              />
+              class="techs__img"
+              src="/assets/images/wf-tech.png"
+              alt="webflow"
+            />
               <img
                 class="techs__img"
                 src="/assets/images/illustrator-tech.png"
@@ -1061,6 +1070,26 @@
                 <li class="footer__item"><a href="#">Često postavljena pitnja</a></li>
               </ul>
             </nav>
+            <div class="socials-wrapper">
+              <a href="https://www.facebook.com/profile.php?id=100095723823495" target="_blank" aria-label="link for facebook" title="Facebook"
+                ><img src="/assets/icons/fb-icon.svg" alt="facebook icon"
+              /></a>
+              <a href="https://github.com/Boris-Galac" target="_blank" aria-label="link for github repository" title="Github"
+                ><img src="/assets/icons/github-icon.svg" alt="github icon"
+              /></a>
+              <a href="https://www.instagram.com/galac.design/" target="_blank" aria-label="link for instagram" title="Instgaram"
+                ><img src="/assets/icons/instagram-icon.svg" alt="instagram icon"
+              /></a>
+              <a href="https://codepen.io/boris-galac" target="_blank" aria-label="link for codepen" title="Codepen"
+                ><img src="/assets/icons/codepen-icon.svg" alt="codepen icon"
+              /></a>
+              <a href="https://dribbble.com/Boris_88" target="_blank" aria-label="link for dribbble" title="Dribbble"
+                ><img src="/assets/icons/dribbble-icon.svg" alt="dribbble icon"
+              /></a>
+              <a href="tel:+385996682736" aria-label="link for phonecall" title="Phonecall"
+                ><img src="/assets/icons/phonecall-icon.svg" alt="phone icon"
+              /></a>
+            </div>
           </div>
           <div class="footer__col">
             <ul class="footer__list">
