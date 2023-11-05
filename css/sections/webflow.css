@@ -1,6 +1,6 @@
 .webflow {
   background: url("/assets/images/wf-overlay.jpg") no-repeat center center/cover;
-  padding-block: 4rem;
+  padding-block: clamp(10vh, 7vw, 15vh);
 }
 .webflow__heading-wrapper {
   margin-bottom: 6rem;

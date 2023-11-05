@@ -148,6 +148,9 @@
     right: 2rem;
     animation: scroll-down 1s alternate infinite ease-in-out;
   }
+  .portfolio__btns {
+    top: 30%;
+  }
 }
 .web-solution-btn {
   display: flex;
