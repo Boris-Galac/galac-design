@@ -198,7 +198,6 @@
 @media (min-width: 1067px) {
   .back-btn::after {
     border-radius: 100vmax;
-    width: 84px;
   }
 }
 .layout-btn {
