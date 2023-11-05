@@ -53,6 +53,7 @@
   background: #181819;
   border: 1px solid #fff;
   border-radius: 4px;
+  font-family: inherit;
   overflow: hidden;
   isolation: isolate;
   transition: 0.5s;

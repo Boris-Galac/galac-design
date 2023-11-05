@@ -123,6 +123,16 @@
   transition: 0.3s;
   cursor: pointer;
 }
+.portfolio__btns {
+  position: absolute;
+  width: min(91%, 70rem);
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-50%, -50%);
+  top: 27%;
+  left: 50%;
+  z-index: 150;
+}
 .portfolio-btn:hover {
   scale: 1.2;
 }
@@ -158,4 +168,61 @@
 }
 .web-solution-inside-btn-img {
   width: 170px;
+}
+.back-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 7rem;
+  display: flex;
+}
+.back-btn > img:nth-child(2) {
+  object-fit: contain;
+  aspect-ratio: 1;
+  width: 24px;
+}
+.back-btn::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  transition: 0.3s;
+  height: 50px;
+  top: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  left: -1rem;
+  background-color: rgba(240, 248, 255, 0.2);
+}
+.back-btn:hover::after {
+  outline: 1px solid grey;
+}
+@media (min-width: 1067px) {
+  .back-btn::after {
+    border-radius: 100vmax;
+    width: 84px;
+  }
+}
+.layout-btn {
+  transition: 0.3s;
+  aspect-ratio: 1;
+  margin: auto;
+  background-color: var(--black);
+  border-radius: 13px;
+  outline: 1px solid rgb(51, 51, 249);
+  box-shadow: 0 0 0 5px rgb(0, 0, 0);
+  cursor: pointer;
+  display: none;
+}
+.layout-btn:hover {
+  background-color: rgb(31, 31, 31);
+  scale: 1.05;
+}
+.layout-btn.active {
+  display: block;
+}
+.layout-btn > img {
+  object-fit: contain;
+  aspect-ratio: 1;
+  width: 45px;
+  margin-right: 5px;
+  pointer-events: none;
 }

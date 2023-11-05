@@ -14,6 +14,7 @@
 @import "sections/faq.css";
 @import "sections/consult.css";
 @import "sections/webflow.css";
+@import "sections/graficki-dizajn.css";
 
 /* utilities */
 
@@ -26,4 +27,6 @@
 @import "components/bottom-marquee.css";
 @import "components/ads.css";
 @import "components/o-nama-modal.css";
+@import "components/gallery.css";
+@import "components/project.css";
 @import "components/footer.css";

@@ -4,9 +4,11 @@
     center/cover;
   padding-inline: 1rem;
   padding-block: 6rem;
+  padding-bottom: 35rem;
   isolation: isolate;
   background-attachment: fixed;
 }
+
 .portfolio::before {
   content: "";
   position: absolute;
@@ -70,16 +72,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-}
-.portfolio__btns {
-  position: absolute;
-  width: min(91%, 70rem);
-  display: flex;
-  justify-content: space-between;
-  transform: translate(-50%, -50%);
-  top: 33%;
-  left: 50%;
-  z-index: 150;
 }
 
 /* web card */
@@ -162,5 +154,8 @@
 @media (min-width: 1024px) {
   .portfolio__inner-wrapper {
     height: 100vh;
+  }
+  .portfolio {
+    padding-bottom: 15rem;
   }
 }

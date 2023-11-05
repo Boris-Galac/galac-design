@@ -1,0 +1,277 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dobrodošli na website obrta za računalno programiranje 'GALAC-DESIGN'. Obrt se u prvom planu bavi dizajnom i izradom web stranica, web shopova, grafičkim dizajnom, izradom grafičkih materijala, i marketingom. Nadam se da će te na ovoj web lokaciji pronaći najbolje rješenje za svoj business."
+    />
+    <meta name="author" content="GALAC-DESIGN" />
+    <meta
+      name="keywords"
+      content="Web dizajn, web development, grafički dizajn, letak, vizitka, brošura, web stranica, webshop, logotip, logo"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://www.boris-galac.com/assets/images/logo.jpeg"
+    />
+    <meta property="og:image:width" content="1434" />
+    <meta property="og:image:height" content="1433" />
+    <meta property="og:title" content="GALAC-DESIGN" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:url" content="https://www.galac-design.hr" />
+    <meta
+      property="og:description"
+      content="Dobrodošli na website obrta za računalno programiranje 'GALAC-DESIGN'. Obrt se u prvom planu bavi dizajnom i izradom web stranica, web shopova, grafičkim dizajnom, izradom grafičkih materijala, i marketingom. Nadam se da će te na ovoj web lokaciji pronaći najbolje rješenje za svoj business."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="database.js"></script>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/favico.png"
+      type="image/x-icon"
+    />
+    <!-- <link rel="stylesheet" href="dist/style.css" /> -->
+    <title>GALAC-DESIGN</title>
+  </head>
+  <body class="grafika-body">
+    <header class="header">
+      <nav class="nav">
+        <div class="hero__logo">
+          <a
+            href="index.html"
+            aria-label="link to home page of galac-design"
+            title="GALAC-DESIGN"
+          >
+            <img src="/assets/images/logo.svg" alt="logo of galac-design" />
+          </a>
+        </div>
+        <div class="contact-mail">
+          <div class="contact-mail__wrapper">
+            <img src="/assets/icons/mail-icon.svg" aria-hidden="true" />
+            <a href="mailto:boris.galac@gmail.com">boris.galac@gmail.com</a>
+          </div>
+          <div class="contact-mail__wrapper">
+            <img src="/assets/icons/phone-icon.svg" aria-hidden="true" />
+            <a href="tel:+385996682736">0996682736</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main grafika-main">
+      <div class="grafika">
+        <div class="container">
+          <div class="grafika__wrapper">
+            <a
+              href="index.html"
+              class="back-btn"
+              aria-label="back to home page"
+            >
+              <img src="/assets/icons/prev-slide-icon.svg" aria-hidden="true" />
+              <img
+                src="/assets/icons/back-to-home-icon.svg"
+                aria-hidden="true"
+              />
+            </a>
+            <h1 class="h1--heading grafika--h1-heading">
+              PROJEKTI GRAFIČKOG DIZAJNA
+            </h1>
+            <div
+              class="grafika__projects-wrapper"
+              aria-label="projects wrapper container"
+            >
+              <div class="grafika__projects-inner-wrapper">
+                <button
+                  class="project-btn"
+                  data-project="zosak"
+                  title="Zošak Consulting"
+                >
+                  <img
+                    src="/assets/images/zosak-project.png"
+                    alt="zosak project"
+                  />
+                </button>
+                <button
+                  class="project-btn"
+                  data-project="insta-kuhinja"
+                  title="Insta Kuhinja"
+                >
+                  <img
+                    src="/assets/images/insta-kuhinja-project.png"
+                    alt="insta-kuhinja project"
+                  />
+                </button>
+                <button
+                  class="project-btn"
+                  data-project="optimus"
+                  title="Optimus Tovarnik"
+                >
+                  <img
+                    src="/assets/images/optimus-project.png"
+                    alt="optimus tovarnik project"
+                  />
+                </button>
+                <button
+                  class="project-btn"
+                  data-project="hq-informatika"
+                  title="HQ iNFORMATIKA"
+                >
+                  <img
+                    src="/assets/images/hqinformatika-project.png"
+                    alt="hq-informatika project"
+                  />
+                </button>
+                <button class="project-btn" data-project="ladno" title="'Ladno">
+                  <img
+                    src="/assets/images/ladno-project.png"
+                    alt="ladno project"
+                  />
+                </button>
+                <button class="layout-btn">
+                  <!-- <img src="/assets/icons/layout-icon.svg" aria-hidden="true" /> -->
+                  <img
+                    src="/assets/icons/prev-slide-icon.svg"
+                    aria-hidden="true"
+                  />
+                </button>
+              </div>
+            </div>
+            <!-- PROJECTS -->
+            <section class="projects" data-opened="false"></section>
+            <!-- END OF PROJECTS -->
+          </div>
+        </div>
+      </div>
+      <span class="spin-loader">
+        <button
+          class="scroll-to-top-btn"
+          aria-label="scroll to top of the page"
+        >
+          <img src="/assets/icons/top-icon.svg" alt="scroll to top icon" />
+        </button>
+      </span>
+    </main>
+    <footer class="footer p-block-6">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__col footer--first-col">
+            <img
+              src="/assets/images/logo.svg"
+              alt="footer image logo"
+              class="footer__logo"
+            />
+            <nav class="footer__nav">
+              <ul class="footer__list">
+                <li class="footer__item"><a href="#">Usluge</a></li>
+                <li class="footer__item"><a href="#">Portfolio</a></li>
+                <li class="footer__item">
+                  <a href="#">Često postavljena pitnja</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="socials-wrapper">
+              <a
+                href="https://www.facebook.com/profile.php?id=100095723823495"
+                target="_blank"
+                aria-label="link for facebook"
+                title="Facebook"
+                ><img src="/assets/icons/fb-icon.svg" alt="facebook icon"
+              /></a>
+              <a
+                href="https://github.com/Boris-Galac"
+                target="_blank"
+                aria-label="link for github repository"
+                title="Github"
+                ><img src="/assets/icons/github-icon.svg" alt="github icon"
+              /></a>
+              <a
+                href="https://www.instagram.com/galac.design/"
+                target="_blank"
+                aria-label="link for instagram"
+                title="Instgaram"
+                ><img
+                  src="/assets/icons/instagram-icon.svg"
+                  alt="instagram icon"
+              /></a>
+              <a
+                href="https://codepen.io/boris-galac"
+                target="_blank"
+                aria-label="link for codepen"
+                title="Codepen"
+                ><img src="/assets/icons/codepen-icon.svg" alt="codepen icon"
+              /></a>
+              <a
+                href="https://dribbble.com/Boris_88"
+                target="_blank"
+                aria-label="link for dribbble"
+                title="Dribbble"
+                ><img src="/assets/icons/dribbble-icon.svg" alt="dribbble icon"
+              /></a>
+              <a
+                href="tel:+385996682736"
+                aria-label="link for phonecall"
+                title="Phonecall"
+                ><img src="/assets/icons/phonecall-icon.svg" alt="phone icon"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <img src="/assets/icons/mail-icon.svg" alt="mail icon" />
+                <a href="mailto:boris.galac@gmail.com">boris.galac@gmail.com</a>
+              </li>
+              <li class="footer__item">
+                <img src="/assets/icons/phone-icon.svg" alt="phone icon" />
+                <a href="tel:+385996682736">0996682736</a>
+              </li>
+              <li class="footer__item">
+                <img
+                  src="/assets/icons/corporation-icon.svg"
+                  alt="corporation icon"
+                />
+                <span class="galac-design">GALAC-DESIGN</span>
+                <span class="naziv-obrta">Obrt za računalno programiranje</span>
+              </li>
+              <li class="footer__item">
+                <img
+                  src="/assets/icons/building-icon.svg"
+                  alt="building icon"
+                />
+                <p class="adresa">Alojzija Stepinca 11, 32249 Tovarnik</p>
+              </li>
+              <li class="footer__item">
+                <img
+                  src="/assets/icons/bank-card-icon.svg"
+                  alt="bank card icon"
+                />
+                <p class="iban">HR4023600001103081807</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-all-rights">
+      <div class="footer-all-rights__wrapper">
+        <div class="footer-all-rights__col">
+          Copyright &copy; 2023 - All Rights Reserved.
+        </div>
+        <div class="footer-all-rights__col footer-all-rights__col--last-col">
+          <span class="galac-design">GALAC-DESIGN</span>
+          <span class="naziv-obrta">Obrt za računalno programiranje</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

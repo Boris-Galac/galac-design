@@ -160,7 +160,6 @@ span {
   font-weight: 300;
   line-height: 180%;
 }
-
 @media (min-width: 768px) {
   .solutions__heading {
     margin-bottom: 4rem !important;
@@ -170,4 +169,12 @@ span {
 .solution--webdesign-paragraph {
   font-weight: 300;
   order: 1;
+}
+.grafika--h1-heading {
+  grid-row: 1;
+  place-self: center;
+  font-size: clamp(1.4rem, 5vw, 3rem);
+  font-weight: 400;
+  grid-column: 1/-1;
+  margin-block: 2rem;
 }
