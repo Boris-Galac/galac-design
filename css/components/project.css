@@ -4,6 +4,11 @@
   grid-row: 5/-1;
   gap: 1rem;
 }
+@media (min-width: 768px) {
+  .projects {
+    grid-column: 2/-1;
+  }
+}
 .projects[data-opened="false"] {
   pointer-events: none;
 }

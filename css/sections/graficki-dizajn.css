@@ -2,6 +2,7 @@
   left: 0;
 }
 .grafika {
+  position: relative;
   padding-block: 5rem;
   min-height: 100%;
   background: linear-gradient(
@@ -14,8 +15,17 @@
   );
   background-size: 500% 500%;
   animation: gradient-animation 25s ease infinite;
+  isolation: isolate;
 }
-
+.grafika::after {
+  content: "";
+  position: absolute;
+  background: url("/assets/images/ab.png") no-repeat center center/cover;
+  inset: 0;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.24;
+}
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -56,10 +66,9 @@
   margin-right: 13px;
 }
 .grafika__projects-inner-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 1rem;
-  justify-content: center;
 }
 .project-btn {
   padding: 0.5rem;
@@ -69,6 +78,7 @@
   border-radius: 1rem;
   transition: 0.3s;
   cursor: pointer;
+  margin: auto;
 }
 .project-btn > img {
   border-radius: 5px;
@@ -80,8 +90,11 @@
 /* opened project layout */
 .opened-project-layout {
   grid-column: 1;
+  justify-content: center;
 }
 .aside-projects {
+  display: flex;
+  flex-wrap: wrap;
   position: fixed;
   flex-direction: column;
   background-color: #4b4b4b9e;

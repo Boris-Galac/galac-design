@@ -175,7 +175,7 @@
 .back-btn {
   position: absolute;
   cursor: pointer;
-  top: 7rem;
+  top: 2rem;
   display: flex;
 }
 .back-btn > img:nth-child(2) {
