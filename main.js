@@ -463,7 +463,7 @@ if (window.location.href.includes("graficki-dizajn")) {
       asideBarProjects.classList.remove("aside-projects");
       layoutBtn.classList.remove("active");
     }
-
+    window.scrollTo({ top: 0, behavior: "smooth" });
     if (projectsWrapper.hasChildNodes()) {
       projectsWrapper.firstElementChild.remove();
     }
