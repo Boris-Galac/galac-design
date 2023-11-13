@@ -106,6 +106,14 @@ span {
   line-height: 115%;
   text-align: center;
 }
+.process-web__subheading {
+  font-size: 1.5rem;
+  color: var(--dark);
+  font-family: inherit;
+  font-weight: 500;
+  text-align: start;
+  margin-bottom: 1rem;
+}
 .project-name,
 .project-type,
 .project-desc {
