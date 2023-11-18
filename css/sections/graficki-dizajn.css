@@ -17,15 +17,6 @@
   animation: gradient-animation 25s ease infinite;
   isolation: isolate;
 }
-/* .grafika::after {
-  content: "";
-  position: absolute;
-  background: url("/assets/images/ab.png") no-repeat center center/cover;
-  inset: 0;
-  background-attachment: fixed;
-  z-index: -1;
-  opacity: 0.24;
-} */
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;

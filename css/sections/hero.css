@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 60% 1fr;
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
 }
 .hero__overlay-video {

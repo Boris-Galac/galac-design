@@ -115,6 +115,9 @@
 
 @media (min-width: 1921px) {
   .nav {
+    padding: 0rem;
+  }
+  .grafika-body .nav {
     padding: 1rem;
   }
   .nav__list {
