@@ -13,7 +13,6 @@ if (
     if (navAttr === "false") {
       navList.setAttribute("data-visible", "true");
       navList.setAttribute("aria-expanded", "true");
-
       hamLine.forEach((line) => {
         line.setAttribute("aria-expanded", "true");
       });
@@ -25,6 +24,17 @@ if (
       });
     }
   });
+  // WHEN USER CLIKS ON LINK CLOSE NAV MENU
+  document.querySelector(".nav__list").addEventListener("click", (e) => {
+    if (e.target.matches(".nav__link")) {
+      e.currentTarget.setAttribute("data-visible", "false");
+      e.currentTarget.setAttribute("aria-expanded", "false");
+      hamLine.forEach((line) => {
+        line.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+
   // CLICK OUT OF NAV WRAPPER
   navList.addEventListener("click", (e) => {
     if (e.target === e.currentTarget) {
