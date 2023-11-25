@@ -34,6 +34,29 @@ if (
       });
     }
   });
+  window.addEventListener("resize", (e) => {
+    if (window.innerWidth > 1921) {
+      document.querySelector(".nav__list").addEventListener("click", (e) => {
+        if (e.target.matches(".nav__link")) {
+          e.currentTarget.setAttribute("data-visible", "true");
+          e.currentTarget.setAttribute("aria-expanded", "true");
+          hamLine.forEach((line) => {
+            line.setAttribute("aria-expanded", "false");
+          });
+        }
+      });
+    } else {
+      document.querySelector(".nav__list").addEventListener("click", (e) => {
+        if (e.target.matches(".nav__link")) {
+          e.currentTarget.setAttribute("data-visible", "false");
+          e.currentTarget.setAttribute("aria-expanded", "false");
+          hamLine.forEach((line) => {
+            line.setAttribute("aria-expanded", "false");
+          });
+        }
+      });
+    }
+  });
 
   // CLICK OUT OF NAV WRAPPER
   navList.addEventListener("click", (e) => {
