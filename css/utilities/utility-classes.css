@@ -286,3 +286,48 @@
     transform: rotate(405deg);
   }
 }
+
+/* lang overlay modal */
+.lang-question {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lang-question[data-active="true"] {
+  pointer-events: visible;
+  opacity: 1;
+}
+.lang-question[data-active="false"] {
+  animation: lang-question-false 0.3s forwards;
+}
+@keyframes lang-question-false {
+  from {
+    pointer-events: visible;
+    opacity: 1;
+  }
+  to {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+.lang-question__modal {
+  display: grid;
+}
+.lang-question__option-btn {
+  color: #fff;
+  transition: 0.3s;
+}
+.lang-question__option-btn:hover {
+  filter: brightness(1.5);
+  scale: 1.2;
+  cursor: pointer;
+}
+.lang-question__option-btn img {
+  width: min(50vw, 250px);
+  pointer-events: none;
+  filter: drop-shadow(0 0 20px black);
+}

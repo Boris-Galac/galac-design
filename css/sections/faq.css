@@ -2,6 +2,12 @@
   position: relative;
   isolation: isolate;
 }
+.faq__question span {
+  color: var(--dark);
+  display: contents;
+  pointer-events: none;
+  user-select: none;
+}
 .faq::after {
   content: "";
   position: absolute;

@@ -16,6 +16,10 @@
 .graphic-des-icon {
   width: 48px;
 }
+.solutions span {
+  display: inline;
+  color: var(--paragraph-clr);
+}
 .solutions__webdesign-img--height-second-row {
   height: 200px;
 }

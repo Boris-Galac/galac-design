@@ -127,6 +127,7 @@
   overflow: hidden;
 }
 .hero__headline-row {
+  width: max-content;
   transform: translateY(400%);
   animation: headline 2.5s forwards;
 }
