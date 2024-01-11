@@ -7,6 +7,7 @@ function element(element) {
 //////// 💡💡💡💡💡
 if (
   window.location.href.includes("index") ||
+  window.location.href.length === 22 ||
   !window.location.href.includes("graficki-dizajn")
 ) {
   // HAMBURGER BTN AND MENU
@@ -267,45 +268,6 @@ if (
     }
   });
 
-  //// WEB SOLUTIONS
-
-  let webSolutionsBtnbs = document.querySelectorAll(".web-solution-btn");
-
-  webSolutionsBtnbs.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const obj = [
-        {
-          id: "custom-code",
-          text: `Custom code rješenje je rješenje koje naš tim prihvaća jedino ukoliko to izričito kupac želi, što zbog potrebnog transparentnog koda na Github u i daljnje, moguće aplikativne nadogradnje, a što zbog određenih detalja koje primjerice neki page builderi ne mogu izvesti.`,
-          img: "/assets/images/custom-code-tab.svg",
-        },
-        {
-          id: "wordpress",
-          text: `WordPress je najpoznatija platforma za izradu web stranica i blogova. Omogućava korisnicima lako prilagodljiv izgled i funkcionalnost svojih web stranica. WordPress je jednostavan za upotrebu i podržava upravljanje sadržajem putem CMS-a, uključujući blogove, galerije i e-trgovinu. Sa velikom zajednicom i bogatim ekosistemom, WordPress je popularan izbor za razvoj web stranica svih vrsta, od osobnih blogova do korporativnih sajtova i online shopova.`,
-          img: "/assets/images/wp-tab.svg",
-        },
-        {
-          id: "webflow",
-          text: `Webflow je visokokvalitetna platforma za izradu web stranica koja kombinira jednostavan vizualni dizajn s naprednim mogućnostima kodiranja. Sa svojim vizualnim alatom, korisnici mogu brzo kreirati privlačne web stranice, bez potrebe za pisanjem koda. Takođe pruža funkcionalnosti kao što su CMS za upravljanje sadržajem, responsivni dizajn za prilagodbu na različite uređaje, interaktivne animacije i hosting. Webflow takođe omogućava prilagodljivost i kontrolu putem pristupa kodu za one sa više tehničkog iskustva. Svi ovi elementi čine Webflow popularnim izborom za razvoj web stranica.`,
-          img: "/assets/images/webflow-tab.svg",
-        },
-      ];
-      const modal = document.createElement("div");
-      const modalImg = document.createElement("img");
-      modal.classList.add("web-modal");
-      modal.setAttribute("aria-expanded", "true");
-      modal.setAttribute("aria-label", "Web solutions for you");
-      const paragraph = document.createElement("p");
-      paragraph.classList.add("solution--webdesign-paragraph");
-      const abc = btn.dataset.tab;
-      const hej = obj.find((obj) => obj.id === abc);
-      paragraph.innerText = hej.text;
-      modalImg.src = hej.img;
-      modal.append(modalImg, paragraph);
-      createOverlay(modal);
-    });
-  });
-
   //// OVERLAY
 
   overlay.addEventListener("click", (e) => {
@@ -331,15 +293,74 @@ if (
     window.open(targetUrl, "_blank");
   });
 
-  // GRAFIKA PAGE
-
-  if (window.location.href.includes("graficki-dizajn")) {
-    const headerHeight = document.querySelector(".header").scrollHeight;
-    document.querySelector(".grafika-main").style = `
-    padding-top: ${headerHeight}px;
-  `;
-  }
+  let webSolutionsBtns = document.querySelectorAll(".web-solution-btn");
+  webSolutionsBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const obj = [
+        {
+          lang: "hrv",
+          id: "custom-code",
+          text: `Custom code rješenje je rješenje koje naš tim prihvaća jedino ukoliko to izričito kupac želi, što zbog potrebnog transparentnog koda na Github u i daljnje, moguće aplikativne nadogradnje, a što zbog određenih detalja koje primjerice neki page builderi ne mogu izvesti.`,
+          img: "/assets/images/custom-code-tab.svg",
+        },
+        {
+          lang: "hrv",
+          id: "wordpress",
+          text: `WordPress je najpoznatija platforma za izradu web stranica i blogova. Omogućava korisnicima lako prilagodljiv izgled i funkcionalnost svojih web stranica. WordPress je jednostavan za upotrebu i podržava upravljanje sadržajem putem CMS-a, uključujući blogove, galerije i e-trgovinu. Sa velikom zajednicom i bogatim ekosistemom, WordPress je popularan izbor za razvoj web stranica svih vrsta, od osobnih blogova do korporativnih sajtova i online shopova.`,
+          img: "/assets/images/wp-tab.svg",
+        },
+        {
+          lang: "hrv",
+          id: "webflow",
+          text: `Webflow je visokokvalitetna platforma za izradu web stranica koja kombinira jednostavan vizualni dizajn s naprednim mogućnostima kodiranja. Sa svojim vizualnim alatom, korisnici mogu brzo kreirati privlačne web stranice, bez potrebe za pisanjem koda. Takođe pruža funkcionalnosti kao što su CMS za upravljanje sadržajem, responsivni dizajn za prilagodbu na različite uređaje, interaktivne animacije i hosting. Webflow takođe omogućava prilagodljivost i kontrolu putem pristupa kodu za one sa više tehničkog iskustva. Svi ovi elementi čine Webflow popularnim izborom za razvoj web stranica.`,
+          img: "/assets/images/webflow-tab.svg",
+        },
+        {
+          lang: "eng",
+          id: "custom-code",
+          text: `A custom code solution is a solution that our team accepts only if the customer specifically wants it, due to the necessary transparent code on Github and further, possible application upgrades, and due to certain details that, for example, some page builders cannot perform.`,
+          img: "/assets/images/custom-code-tab.svg",
+        },
+        {
+          lang: "eng",
+          id: "wordpress",
+          text: `WordPress is the most famous platform for creating websites and blogs. It allows users to easily customize the appearance and functionality of their websites. WordPress is easy to use and supports CMS content management, including blogs, galleries and e-commerce. With a large community and a rich ecosystem, WordPress is a popular choice for developing websites of all kinds, from personal blogs to corporate sites and online shops.`,
+          img: "/assets/images/wp-tab.svg",
+        },
+        {
+          lang: "eng",
+          id: "webflow",
+          text: `Webflow is a high-quality website building platform that combines simple visual design with advanced coding capabilities. With its visual tool, users can quickly create attractive web pages, without the need to write code. It also provides functionalities such as CMS for content management, responsive design to adapt to different devices, interactive animations and hosting. Webflow also allows customization and control through code access for those with more technical experience. All these elements make Webflow a popular choice for website development.`,
+          img: "/assets/images/webflow-tab.svg",
+        },
+      ];
+      const modal = document.createElement("div");
+      const modalImg = document.createElement("img");
+      modal.classList.add("web-modal");
+      modal.setAttribute("aria-expanded", "true");
+      modal.setAttribute("aria-label", "Web solutions for you");
+      const paragraph = document.createElement("p");
+      paragraph.classList.add("solution--webdesign-paragraph");
+      const abc = btn.dataset.tab;
+      document.querySelectorAll(".language-form__option").forEach((option) => {
+        if (option.classList.contains("active")) {
+          let curentLang = option.firstElementChild.dataset.value;
+          const solutionItemLang = obj.filter((obj) => {
+            return obj.id === abc;
+          });
+          let filteredItems = solutionItemLang;
+          let buc = filteredItems.find((obj) => obj.lang === curentLang);
+          console.log(curentLang);
+          paragraph.innerText = buc.text;
+          modalImg.src = buc.img;
+          modal.append(modalImg, paragraph);
+          createOverlay(modal);
+        }
+      });
+    });
+  });
 }
+////////// END OF HOME or INDEX PAGE
 
 //////// 💡💡💡💡💡 GRAFICKI DIZAJN PAGE
 
@@ -426,9 +447,8 @@ if (window.location.href.includes("graficki-dizajn")) {
   const grafikaMain = document.querySelector(".grafika-main");
 
   grafikaMain.style = `
-  padding-top: ${heightHeader}px;
+  padding-top: ${"75"}px;
   `;
-
   // OPEN THE PROJECT & ASIDE BAR
   const layoutBtn = document.querySelector(".layout-btn");
 
@@ -728,15 +748,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function eng() {
   if (
-    window.location.href.includes("index") &&
-    window.location.href.includes("/")
+    window.location.href.includes("index") ||
+    window.location.href.length === 22
   ) {
     element(".hero__headline-row:nth-child(1)").innerText = "We transform";
     element(".hero__headline-row:nth-child(2)").innerText = "Your ideas";
     element(".hero__headline-row:nth-child(3)").innerText = "Into";
     element(".hero__headline-row:nth-child(4)").innerText = "Digital reality";
     element(".hero__subheadline").innerText =
-      "Efficient and high-quality creation of websites, shops, graphic design, all types of digital design and marketing according to your needs";
+      "Efficient and high-quality creation of websites, shops, graphic design, all types of digital design and marketing";
     element(".lang-item-1").innerText = "OFFER";
     element(".lang-item-2").innerText = "WEB PORTFOLIO";
     element(".lang-item-3").innerText = "GRAPHIC DESIGN";
@@ -951,8 +971,8 @@ function eng() {
 
 function hrv() {
   if (
-    window.location.href.includes("index") &&
-    window.location.href.includes("/")
+    window.location.href.includes("index") ||
+    window.location.href.length === 22
   ) {
     element(".hero__headline-row:nth-child(1)").innerText = "Transformiramo";
     element(".hero__headline-row:nth-child(2)").innerText = "Vaše ideje u";
@@ -1159,70 +1179,3 @@ function hrv() {
     .querySelectorAll(".footer-obrt-label-2")
     .forEach((item) => (item.innerText = "Obrt za računalno programiranje"));
 }
-
-let webSolutionsBtnbs = document.querySelectorAll(".web-solution-btn");
-webSolutionsBtnbs.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const obj = [
-      {
-        lang: "hrv",
-        id: "custom-code",
-        text: `Custom code rješenje je rješenje koje naš tim prihvaća jedino ukoliko to izričito kupac želi, što zbog potrebnog transparentnog koda na Github u i daljnje, moguće aplikativne nadogradnje, a što zbog određenih detalja koje primjerice neki page builderi ne mogu izvesti.`,
-        img: "/assets/images/custom-code-tab.svg",
-      },
-      {
-        lang: "hrv",
-        id: "wordpress",
-        text: `WordPress je najpoznatija platforma za izradu web stranica i blogova. Omogućava korisnicima lako prilagodljiv izgled i funkcionalnost svojih web stranica. WordPress je jednostavan za upotrebu i podržava upravljanje sadržajem putem CMS-a, uključujući blogove, galerije i e-trgovinu. Sa velikom zajednicom i bogatim ekosistemom, WordPress je popularan izbor za razvoj web stranica svih vrsta, od osobnih blogova do korporativnih sajtova i online shopova.`,
-        img: "/assets/images/wp-tab.svg",
-      },
-      {
-        lang: "hrv",
-        id: "webflow",
-        text: `Webflow je visokokvalitetna platforma za izradu web stranica koja kombinira jednostavan vizualni dizajn s naprednim mogućnostima kodiranja. Sa svojim vizualnim alatom, korisnici mogu brzo kreirati privlačne web stranice, bez potrebe za pisanjem koda. Takođe pruža funkcionalnosti kao što su CMS za upravljanje sadržajem, responsivni dizajn za prilagodbu na različite uređaje, interaktivne animacije i hosting. Webflow takođe omogućava prilagodljivost i kontrolu putem pristupa kodu za one sa više tehničkog iskustva. Svi ovi elementi čine Webflow popularnim izborom za razvoj web stranica.`,
-        img: "/assets/images/webflow-tab.svg",
-      },
-      {
-        lang: "eng",
-        id: "custom-code",
-        text: `A custom code solution is a solution that our team accepts only if the customer specifically wants it, due to the necessary transparent code on Github and further, possible application upgrades, and due to certain details that, for example, some page builders cannot perform.`,
-        img: "/assets/images/custom-code-tab.svg",
-      },
-      {
-        lang: "eng",
-        id: "wordpress",
-        text: `WordPress is the most famous platform for creating websites and blogs. It allows users to easily customize the appearance and functionality of their websites. WordPress is easy to use and supports CMS content management, including blogs, galleries and e-commerce. With a large community and a rich ecosystem, WordPress is a popular choice for developing websites of all kinds, from personal blogs to corporate sites and online shops.`,
-        img: "/assets/images/wp-tab.svg",
-      },
-      {
-        lang: "eng",
-        id: "webflow",
-        text: `Webflow is a high-quality website building platform that combines simple visual design with advanced coding capabilities. With its visual tool, users can quickly create attractive web pages, without the need to write code. It also provides functionalities such as CMS for content management, responsive design to adapt to different devices, interactive animations and hosting. Webflow also allows customization and control through code access for those with more technical experience. All these elements make Webflow a popular choice for website development.`,
-        img: "/assets/images/webflow-tab.svg",
-      },
-    ];
-    const modal = document.createElement("div");
-    const modalImg = document.createElement("img");
-    modal.classList.add("web-modal");
-    modal.setAttribute("aria-expanded", "true");
-    modal.setAttribute("aria-label", "Web solutions for you");
-    const paragraph = document.createElement("p");
-    paragraph.classList.add("solution--webdesign-paragraph");
-    const abc = btn.dataset.tab;
-    document.querySelectorAll(".language-form__option").forEach((option) => {
-      if (option.dataset.active === "true") {
-        let curentLang = option.firstElementChild.dataset.value;
-        const solutionItemLang = obj.filter((obj) => {
-          return obj.id === abc;
-        });
-        let filteredItems = solutionItemLang;
-        let buc = filteredItems.find((obj) => obj.lang === curentLang);
-
-        paragraph.innerText = buc.text;
-        modalImg.src = buc.img;
-        modal.append(modalImg, paragraph);
-        createOverlay(modal);
-      }
-    });
-  });
-});
