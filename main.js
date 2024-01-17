@@ -4,7 +4,7 @@ function element(element) {
   return document.querySelector(element);
 }
 
-//////// 💡💡💡💡💡
+//////// 💡💡💡💡💡INDEX PAGE
 if (
   window.location.href.includes("index") ||
   window.location.href.length === 22 ||
@@ -23,19 +23,28 @@ if (
       hamLine.forEach((line) => {
         line.setAttribute("aria-expanded", "true");
       });
+      document.querySelectorAll(".nav__list--block").forEach((block) => {
+        block.setAttribute("data-visible", "true");
+      });
     } else {
       navList.setAttribute("data-visible", "false");
       navList.setAttribute("aria-expanded", "false");
       hamLine.forEach((line) => {
         line.setAttribute("aria-expanded", "false");
       });
+      document.querySelectorAll(".nav__list--block").forEach((block) => {
+        block.setAttribute("data-visible", "false");
+      });
     }
   });
   // WHEN USER CLIKS ON LINK CLOSE NAV MENU
   document.querySelector(".nav__list").addEventListener("click", (e) => {
-    if (e.target.matches(".nav__link")) {
+    if (e.target.matches(".nav__list--block")) {
       e.currentTarget.setAttribute("data-visible", "false");
       e.currentTarget.setAttribute("aria-expanded", "false");
+      document.querySelectorAll(".nav__list--block").forEach((block) => {
+        block.setAttribute("data-visible", "false");
+      });
       hamLine.forEach((line) => {
         line.setAttribute("aria-expanded", "false");
       });
@@ -65,7 +74,7 @@ if (
     }
   });
 
-  // CLICK OUT OF NAV WRAPPER
+  // WHEN I CLICK OUT OF NAV WRAPPER AND HAM LINE GO TO DEFAULT ANIMATION
   navList.addEventListener("click", (e) => {
     if (e.target === e.currentTarget) {
       navList.setAttribute("data-visible", "false");
