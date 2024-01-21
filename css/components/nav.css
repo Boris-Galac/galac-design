@@ -1,9 +1,7 @@
-:root {
-  /* --delay: 0.5s; */
-}
 .nav {
   position: relative;
-  background-color: var(--black);
+  background: linear-gradient(45deg, hsl(0, 0%, 0%), hsl(0, 0%, 19%));
+  box-shadow: 0 7px 17px hsla(0, 0%, 0%, 0.651);
   padding: 1.5rem;
   display: flex;
 }
@@ -23,6 +21,10 @@
   position: fixed;
   inset: 0;
   display: flex;
+}
+.nav__overlay[data-visible="false"] {
+  pointer-events: none;
+  opacity: 0;
 }
 .nav__list--block {
   flex: 1;

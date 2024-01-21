@@ -38,6 +38,11 @@ if (
     }
   });
   // WHEN USER CLIKS ON LINK CLOSE NAV MENU
+  if (window.innerWidth > 1921) {
+    element(".nav__overlay").setAttribute("data-visible", "false");
+  } else {
+    element(".nav__overlay").removeAttribute("data-visible");
+  }
   document.querySelector(".nav__list").addEventListener("click", (e) => {
     if (e.target.matches(".nav__list--block")) {
       e.currentTarget.setAttribute("data-visible", "false");
@@ -52,6 +57,7 @@ if (
   });
   window.addEventListener("resize", (e) => {
     if (window.innerWidth > 1921) {
+      element(".nav__overlay").setAttribute("data-visible", "false");
       document.querySelector(".nav__list").addEventListener("click", (e) => {
         if (e.target.matches(".nav__link")) {
           e.currentTarget.setAttribute("data-visible", "true");
@@ -62,10 +68,12 @@ if (
         }
       });
     } else {
+      element(".nav__overlay").removeAttribute("data-visible");
       document.querySelector(".nav__list").addEventListener("click", (e) => {
         if (e.target.matches(".nav__link")) {
           e.currentTarget.setAttribute("data-visible", "false");
           e.currentTarget.setAttribute("aria-expanded", "false");
+
           hamLine.forEach((line) => {
             line.setAttribute("aria-expanded", "false");
           });
