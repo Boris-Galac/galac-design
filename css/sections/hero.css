@@ -183,6 +183,7 @@
   .nav__list .contact-mail {
     position: static;
     display: grid;
+    margin-right: 1rem;
   }
   .contact-mail {
     border-radius: 6px;

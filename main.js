@@ -984,6 +984,8 @@ function eng() {
   document
     .querySelectorAll(".footer-obrt-label-2")
     .forEach((item) => (item.innerText = "IT services company"));
+  element(".zosak-desc").innerText =
+    "Here we present the project 'Zošak consulting', that is, a company that deals with maintenance, hygiene and consulting related to health and all other business facilities.";
 }
 
 function hrv() {
@@ -1175,6 +1177,8 @@ function hrv() {
       "Naravno da nije. No za siguran i bezbrižan rad vaših stranica, toplo preporučujemo da održavanje prepustite nama. Nedostatak redovitih ažuriranja može uzrokovati ozbiljne sigurnosne ranjivosti i povećati rizik od malwarea, što može rezultirati problemima ili čak prestankom rada vaših stranica. Popravci nakon takvih incidenata često su izuzetno skupi i ponekad čak nemogući. Vaše web stranice temelje se na Wordpress CMS platformi i zahtijevaju redovito nadgledanje, nadogradnje i ažuriranja radi optimalne performanse.";
     element(".konzultacije-heading").innerText =
       "Zatražite besplatne konzultacije";
+    element(".zosak-desc").innerText =
+      "Ovdje Vam predstavljamo projekt 'Zošak consulting', odnosno firmu koja se bavi održavanjem, higijenom i consultingom vezanom za zdravstvene i sve ostale poslovne objekte.";
   }
   if (window.location.href.includes("graficki-dizajn")) {
     element(".grafika-heading").innerText = "PROJEKTI GRAFIČKOG DIZAJNA";
