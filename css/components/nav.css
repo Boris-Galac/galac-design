@@ -168,7 +168,7 @@
   transform: rotate(-45deg);
 }
 
-@media (min-width: 1921px) {
+/* @media (min-width: 1921px) {
   .nav {
     padding: 0rem;
   }
@@ -191,7 +191,7 @@
   .ham-btn {
     display: none;
   }
-}
+} */
 /* Language form */
 .language-form {
   position: absolute;

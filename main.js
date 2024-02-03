@@ -11,78 +11,51 @@ if (
   !window.location.href.includes("graficki-dizajn")
 ) {
   // HAMBURGER BTN AND MENU
-
+  function closeNav() {
+    navList.setAttribute("data-visible", "false");
+    navList.setAttribute("aria-expanded", "false");
+    hamLine.forEach((line) => {
+      line.setAttribute("aria-expanded", "false");
+    });
+    document.querySelectorAll(".nav__list--block").forEach((block) => {
+      block.setAttribute("data-visible", "false");
+    });
+  }
+  function openNav() {
+    navList.setAttribute("data-visible", "true");
+    navList.setAttribute("aria-expanded", "true");
+    hamLine.forEach((line) => {
+      line.setAttribute("aria-expanded", "true");
+    });
+    document.querySelectorAll(".nav__list--block").forEach((block) => {
+      block.setAttribute("data-visible", "true");
+    });
+  }
   const hamBtn = document.querySelector(".ham-btn");
   const navList = document.querySelector(".nav__list");
   const hamLine = document.querySelectorAll(".ham-line");
   hamBtn.addEventListener("click", (e) => {
     let navAttr = navList.getAttribute("data-visible");
     if (navAttr === "false") {
-      navList.setAttribute("data-visible", "true");
-      navList.setAttribute("aria-expanded", "true");
-      hamLine.forEach((line) => {
-        line.setAttribute("aria-expanded", "true");
-      });
-      document.querySelectorAll(".nav__list--block").forEach((block) => {
-        block.setAttribute("data-visible", "true");
-      });
+      openNav();
     } else {
-      navList.setAttribute("data-visible", "false");
-      navList.setAttribute("aria-expanded", "false");
-      hamLine.forEach((line) => {
-        line.setAttribute("aria-expanded", "false");
-      });
-      document.querySelectorAll(".nav__list--block").forEach((block) => {
-        block.setAttribute("data-visible", "false");
-      });
+      closeNav();
     }
   });
-  // WHEN USER CLIKS ON LINK CLOSE NAV MENU
-  if (window.innerWidth > 1921) {
-    element(".nav__overlay").setAttribute("data-visible", "false");
-  } else {
-    element(".nav__overlay").removeAttribute("data-visible");
-  }
+
+  // WHEN I CLICK OUT OF NAV WRAPPER -> CLOSE NAV
+
   document.querySelector(".nav__list").addEventListener("click", (e) => {
     if (e.target.matches(".nav__list--block")) {
-      e.currentTarget.setAttribute("data-visible", "false");
-      e.currentTarget.setAttribute("aria-expanded", "false");
-      document.querySelectorAll(".nav__list--block").forEach((block) => {
-        block.setAttribute("data-visible", "false");
-      });
-      hamLine.forEach((line) => {
-        line.setAttribute("aria-expanded", "false");
-      });
+      closeNav();
     }
-  });
-  window.addEventListener("resize", (e) => {
-    if (window.innerWidth > 1921) {
-      element(".nav__overlay").setAttribute("data-visible", "false");
-      document.querySelector(".nav__list").addEventListener("click", (e) => {
-        if (e.target.matches(".nav__link")) {
-          e.currentTarget.setAttribute("data-visible", "true");
-          e.currentTarget.setAttribute("aria-expanded", "true");
-          hamLine.forEach((line) => {
-            line.setAttribute("aria-expanded", "false");
-          });
-        }
-      });
-    } else {
-      element(".nav__overlay").removeAttribute("data-visible");
-      document.querySelector(".nav__list").addEventListener("click", (e) => {
-        if (e.target.matches(".nav__link")) {
-          e.currentTarget.setAttribute("data-visible", "false");
-          e.currentTarget.setAttribute("aria-expanded", "false");
-
-          hamLine.forEach((line) => {
-            line.setAttribute("aria-expanded", "false");
-          });
-        }
-      });
+    if (e.target.matches(".nav__link")) {
+      closeNav();
     }
   });
 
   // WHEN I CLICK OUT OF NAV WRAPPER AND HAM LINE GO TO DEFAULT ANIMATION
+
   navList.addEventListener("click", (e) => {
     if (e.target === e.currentTarget) {
       navList.setAttribute("data-visible", "false");
@@ -91,6 +64,7 @@ if (
       });
     } else return;
   });
+
   // AD AUTOMATIC SLIDER
 
   const carousel = document.querySelector(".ads");
@@ -137,21 +111,8 @@ if (
     });
   });
 
-  // SHOW MENU ABOVE 1920PX DATA VISIBLE TRUE
-
-  window.addEventListener("resize", (e) => {
-    const nav = document.querySelector(".nav__list");
-    if (window.innerWidth > 1920) {
-      nav.setAttribute("data-visible", "true");
-    } else {
-      nav.setAttribute("data-visible", "false");
-    }
-  });
-  window.addEventListener("DOMContentLoaded", (e) => {
-    if (window.innerWidth > 1920)
-      document.querySelector(".nav__list").setAttribute("data-visible", "true");
-  });
   // PORTFOLIO SLIDER
+
   const prevBtn = document.querySelector(".prev-slide");
   const nextBtn = document.querySelector(".next-slide");
   const sliders = document.querySelectorAll(".project-wrapper");
@@ -279,29 +240,18 @@ if (
       modalOnama.setAttribute("aria-expanded", "true");
     } else {
       overlay.setAttribute("data-visible", "false");
-      overlay.setAttribute("aria-expanded", "true");
+      overlay.setAttribute("aria-expanded", "false");
       modalOnama.setAttribute("data-visible", "false");
       modalOnama.setAttribute("aria-expanded", "false");
     }
-  });
-
-  //// OVERLAY
-
-  overlay.addEventListener("click", (e) => {
-    overlay.setAttribute("data-visible", "false");
-    overlay.setAttribute("aria-expanded", "false");
-    modalOnama.setAttribute("aria-expanded", "false");
-    modalOnama.setAttribute("data-visible", "false");
-    navList.setAttribute("data-visible", "false");
-    navList.setAttribute("aria-expanded", "false");
-    hamLine.forEach((line) => {
-      line.setAttribute("aria-expanded", "false");
+    overlay.addEventListener("click", (e) => {
+      overlay.setAttribute("data-visible", "false");
+      overlay.setAttribute("aria-expanded", "false");
+      modalOnama.setAttribute("data-visible", "false");
+      modalOnama.setAttribute("aria-expanded", "false");
     });
-    if (window.innerWidth >= 1024) {
-      navList.setAttribute("data-visible", "true");
-      navList.setAttribute("aria-expanded", "true");
-    }
   });
+
   // WF BTN
 
   const wfBtn = document.querySelector(".wf-btn");
@@ -965,6 +915,19 @@ function eng() {
     element(".faq-9-paragraph").innerText =
       "Of course not. But for the safe and carefree operation of your sites, we strongly recommend that you leave the maintenance to us. Lack of regular updates can cause serious security vulnerabilities and increase the risk of malware, which can result in problems or even stop your site from working. Repairs after such incidents are often extremely expensive and sometimes even impossible. Your websites are based on the Wordpress CMS platform and require regular monitoring, upgrades and updates for optimal performance.";
     element(".konzultacije-heading").innerText = "Request a free consultation";
+    element(".nola-heading").innerText = "'Nola' apartments";
+    element(".nola-desc").innerText =
+      "Three modern apartments - Nola, Golden Day and Ante, represent a web project that we developed and successfully completed with pleasure. These are apartments located in the heart of Slavonia, Vinkovci, and offer a comfortable stay only 450 meters from the central square.";
+    element(".domagoj-heading").innerText = "'Domagoj' apartments";
+    element(".domagoj-desc").innerText =
+      "The project 'Domagoj apartmani' is one of our successful web projects that we present here. Namely, there are 4 apartments located in the immediate vicinity of the center of Vinkovci. The location is excellent and everything is a few minutes' walk away. Close to the center of the city of Vinkovci, and yet you are in a quieter part of the city where there is no hustle and bustle and where you will have a nice and pleasant stay.";
+    element(".tko-smo-mi-heading").innerText = "Who we are?";
+    element(".tko-smo-mi-first").innerText =
+      "Our website represents the heart of our business. We are a smaller team that works professionally ";
+    element(".tko-smo-mi-yellow-text").innerText =
+      "web design, web development and graphic design.";
+    element(".tko-smo-mi-third").innerText =
+      "We proudly point out that we provide all our services legally and with high professionalism. Get to know us better and let us shape your digital future together.";
   }
   if (window.location.href.includes("graficki-dizajn")) {
     element(".grafika-heading").innerText = "GRAPHIC DESIGN PROJECTS";
@@ -1179,6 +1142,19 @@ function hrv() {
       "Zatražite besplatne konzultacije";
     element(".zosak-desc").innerText =
       "Ovdje Vam predstavljamo projekt 'Zošak consulting', odnosno firmu koja se bavi održavanjem, higijenom i consultingom vezanom za zdravstvene i sve ostale poslovne objekte.";
+    element(".nola-desc").innerText =
+      "Tri moderno uređena apartmana - Nola, Golden Day i Ante, predstavljaju web projekt koji smo sa zadovoljstvom razvili i uspješno završili. Radi se o apartmanima smještenim u srcu Slavonije, Vinkovcima, i nude udoban boravak na svega 450 metara od središnjeg trga.";
+    element(".nola-heading").innerText = "'Nola' apartmani";
+    element(".domagoj-heading").innerText = "'Domagoj' apartmani";
+    element(".domagoj-desc").innerText =
+      "Projekt 'Domagoj apartmani' je jedan u nizu naših uspješnih web projekata koji Vam ovdje predstavljamo. Naime, radi se o 4 apartmana koji se nalaze u neposrednoj blizini samog centra grada Vinkovaca. Lokacija je izvrsna i sve Vam je na nekoliko minuta pješke. Blizina centra grada Vinkovaca, a opet ste u mirnijem dijelu grada gdje nije nije vreva i buka i gdje će Vam biti boravak lijep i ugodan.";
+    element(".tko-smo-mi-heading").innerText = "Tko smo mi?";
+    element(".tko-smo-mi-first").innerText =
+      "Naša web stranica predstavlja srce našeg obrta. Mi smo manji tim koji se profesionalno bavi ";
+    element(".tko-smo-mi-yellow-text").innerText =
+      "web dizajnom, web developmentom i grafičkim dizajnom.";
+    element(".tko-smo-mi-third").innerText =
+      "S ponosom ističemo da sve naše usluge pružamo legalno i s visokim profesionalizmom. Upoznajte nas bliže i dopustite nam da zajedno oblikujemo vašu digitalnu budućnost.";
   }
   if (window.location.href.includes("graficki-dizajn")) {
     element(".grafika-heading").innerText = "PROJEKTI GRAFIČKOG DIZAJNA";
